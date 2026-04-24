@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.14)  24 APR 2026 03:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.14)  24 APR 2026 03:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -23,7 +23,7 @@ File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip50
 \bibindent=\dimen148
 ) (./neurips_2025.sty
-Package: neurips_2025 2025/01/01 NeurIPS 2025 submission style
+Package: neurips_2025 2026/01/01 NeurIPS 2026 submission style
  (/orcd/home/002/mabdel03/.TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2026/03/07 v6.0 Page Geometry
  (/orcd/home/002/mabdel03/.TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty

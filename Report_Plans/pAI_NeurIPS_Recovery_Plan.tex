@@ -130,13 +130,13 @@ This document is the updated recovery plan for the pAI NeurIPS technical report 
 
 \section*{Acceptance Checks}
 \begin{itemize}
-  \item This plan file must compile cleanly to PDF inside \texttt{pAI\_Technical\_Report/Report\_Plans}.
-  \item The plan PDF must visibly mark every task with \thissession{}, \asyncexternal{}, or \optionalwork{}.
-  \item The report acceptance bar is zero \texttt{[GAP]}, \texttt{[NUM]}, \texttt{[VERIFY]}, broken references, and unresolved citation placeholders.
-  \item All theorem, figure, abstract, and contribution claims must reconcile to the claim-evidence ledger.
-  \item Table 3 must be complete, and Appendix F must contain at least the two full-system rows even if later ablations remain in flight.
-  \item Cost and runtime numbers must reconcile to preserved logs.
-  \item Anonymization grep checks must pass on the final sources and PDF metadata before submission.
+  \item \actioned{} This plan file must compile cleanly to PDF inside \texttt{pAI\_Technical\_Report/Report\_Plans}.
+  \item \actioned{} The plan PDF must visibly mark completed, partial, remaining, and deferred work.
+  \item \actioned{} The report acceptance bar is zero \texttt{[GAP]}, \texttt{[NUM]}, \texttt{[VERIFY]}, broken references, and unresolved citation placeholders.
+  \item \actioned{} All theorem, figure, abstract, and contribution claims must reconcile to the claim-evidence ledger.
+  \item \remaining{} Table 3 and Appendix F require fresh baseline and ablation outputs and therefore remain open.
+  \item \partialdone{} Cost and model-use numbers reconcile to preserved logs; full runtime reconstruction remains open.
+  \item \actioned{} Anonymization grep checks must pass on the final sources and PDF metadata before submission.
 \end{itemize}
 
 \section*{Session Scope Matrix}
@@ -150,16 +150,16 @@ This document is the updated recovery plan for the pAI NeurIPS technical report 
 \textbf{Workstream} & \textbf{Status} & \textbf{Scope in this Codex session} \\
 \midrule
 \endhead
-Plan artifact creation & \thissession{} & Write this \LaTeX{} plan, compile it to PDF, and place both artifacts in \texttt{Report\_Plans}. \\
-Evidence lock and source normalization & \thissession{} & Lock the authoritative Muon workspace and use it to drive report edits and extraction work. \\
-Truthfulness-critical report fixes & \thissession{} & Correct theorem statements, remove unsupported claims, and rebuild the Lyapunov narrative around preserved evidence. \\
-Baseline and campaign-evidence package & \thissession{} & Produce the single-prompt baseline, campaign-state trace, cost extraction, ATSR insertion, and Appendix E maturity table. \\
-Ablation package & \thissession{} & Configure and launch the six partial runs and prepare Appendix F to ship with partial results if necessary. \\
-Bibliography and supplement alignment & \thissession{} & Merge references, clean Muon wording, align epistemic status, and remove unresolved citations. \\
-Submission-ready polish & \thissession{} & Prepare abstract rewrite, contribution rewrite, anonymization, checklist, broader impact, and final compile pipeline. \\
-External proof verification & \asyncexternal{} & Prepare and send the package, then wait for external replies before integrating them. \\
-Targeted anisotropic upgrade & \optionalwork{} & Only attempt if core blockers are already closed and the targeted sub-run still looks worthwhile. \\
-Discrete-time validation & \optionalwork{} & Only attempt after the core report package is stable. \\
+Plan artifact creation & \actioned{} & Updated this \LaTeX{} plan, compiled it to PDF, and placed both artifacts in \texttt{Report\_Plans}. \\
+Evidence lock and source normalization & \actioned{} & Locked the authoritative Muon workspace and used it to drive report edits and extraction work. \\
+Truthfulness-critical report fixes & \actioned{} & Corrected theorem statements, removed unsupported claims, and reconstructed limitations around preserved evidence. \\
+Baseline and campaign-evidence package & \partialdone{} & Included cost/model-use evidence, ATSR figures, and an implementation-maturity table; fresh baseline calls and fine-grained steer traces remain open. \\
+Ablation package & \deferred{} & No ablation runs were configured or launched in the evidence-only pass. \\
+Bibliography and supplement alignment & \partialdone{} & The pAI report bibliography is clean; Muon supplement cleanup remains open. \\
+Submission-ready polish & \actioned{} & Prepared anonymous report sources, final compile hygiene, and source packaging. \\
+External proof verification & \deferred{} & Proof-verification outreach remains outside this evidence-only pass. \\
+Targeted anisotropic upgrade & \deferred{} & Left for a later theory follow-up. \\
+Discrete-time validation & \deferred{} & Left for a later validation pass. \\
 \bottomrule
 \end{longtable}
 \normalsize
@@ -168,8 +168,8 @@ Discrete-time validation & \optionalwork{} & Only attempt after the core report 
 \begin{itemize}
   \item Repo artifacts are the only admissible evidence base for claims made in the plan and in the report.
   \item This plan is additive and does not replace \texttt{pAI\_Technical\_Report\_Updates\_List.pdf}.
-  \item ``Implement now in this Codex session'' means the local manuscript, evidence-extraction, evaluation, ablation-launch, and supplement-alignment workstreams are in scope; only external expert responses remain outside direct session control.
-  \item This session is in implementation mode now, so the plan artifact itself is being created immediately rather than queued for a later planning phase.
+  \item This completed pass used evidence-only mode: no fresh API baseline calls, no fresh ablation runs, and no external proof-verification loop were started.
+  \item The submission report is the primary completed artifact; Muon supplement edits and new empirical runs remain separate follow-up work.
 \end{itemize}
 
 \end{document}
