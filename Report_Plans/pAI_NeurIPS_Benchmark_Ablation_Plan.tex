@@ -1,0 +1,370 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+\IfFileExists{pdflscape.sty}{\usepackage{pdflscape}}{\usepackage{lscape}}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!black,
+  urlcolor=blue!50!black,
+  citecolor=blue!50!black
+}
+
+\setlist[itemize]{leftmargin=1.4em, itemsep=0.3em, topsep=0.35em}
+\setlist[enumerate]{leftmargin=1.6em, itemsep=0.3em, topsep=0.35em}
+\setlength{\parskip}{0.45em}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{3em}
+\renewcommand{\arraystretch}{1.18}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\core}{\textbf{\textcolor{green!45!black}{[CORE]}}}
+\newcommand{\tagstretch}{\textbf{\textcolor{blue!65!black}{[STRETCH]}}}
+\newcommand{\defer}{\textbf{\textcolor{orange!80!black}{[DEFER]}}}
+\newcommand{\risk}{\textbf{\textcolor{red!65!black}{[RISK]}}}
+\newcommand{\todo}{\textbf{\textcolor{purple!70!black}{[TODO]}}}
+\newcommand{\pai}{pAI}
+
+\title{\pai{} NeurIPS Benchmark, Ablation, and Framing Plan}
+\author{Research Planning Artifact}
+\date{April 24, 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Executive Summary}
+
+This plan reframes \pai{} as a \textbf{human-on-the-loop ML-theory research engine}: a research control plane that turns an informal research direction into an auditable typed state consisting of goals, claim DAGs, coupled theory and experiment tracks, empirical validation artifacts, councils, gates, reviewer feedback, and manuscript claims traceable to evidence.
+
+The central change is evidentiary. The NeurIPS technical report should not rest its system claim primarily on the Muon case study. Muon remains a realistic stress test showing intertwined theory-plus-empirical work and honest gap tracking, while the broader system argument must be supported by \textbf{existing benchmarks} routed through the relevant \pai{} subgraphs and by ablations that test whether the claimed system components matter.
+
+\textbf{Target artifacts.}
+\begin{itemize}
+  \item \texttt{pAI\_Technical\_Report/Report\_Plans/pAI\_NeurIPS\_Benchmark\_Ablation\_Plan.tex}
+  \item \texttt{pAI\_Technical\_Report/Report\_Plans/pAI\_NeurIPS\_Benchmark\_Ablation\_Plan.pdf}
+\end{itemize}
+
+\section*{Revised Narrative}
+
+The report should center on the following scoped claim:
+
+\begin{quote}
+\pai{} is a human-on-the-loop ML-theory research control plane that turns an informal research direction into an auditable typed state: goals, claim DAGs, coupled theory/experiment tracks, empirical validation artifacts, councils, gates, reviewer feedback, and manuscript claims traceable to evidence.
+\end{quote}
+
+This claim is deliberately narrower than ``fully automated scientific discovery.'' It positions \pai{} against systems that optimize for autonomy, while emphasizing the research-science argument most likely to survive NeurIPS review: quality in difficult ML-theory work improves when frontier agents are composed into typed, inspectable, human-steerable subgraphs rather than a single opaque autonomous loop.
+
+\section*{Contribution Claims}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.08\textwidth} >{\raggedright\arraybackslash}p{0.24\textwidth} >{\raggedright\arraybackslash}p{0.30\textwidth} >{\raggedright\arraybackslash}p{0.23\textwidth}}
+\toprule
+\textbf{ID} & \textbf{Claim} & \textbf{Mechanism in \pai{}} & \textbf{Evidence Required} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{ID} & \textbf{Claim} & \textbf{Mechanism in \pai{}} & \textbf{Evidence Required} \\
+\midrule
+\endhead
+C1 & Human-on-the-loop research control & Human gates at strategic checkpoints, milestone reports, structured steering decisions, and feedback history. & Human-steering ablation on matched benchmark tasks; report human time separately from compute cost. \\
+C2 & Claim-centric ML-theory state & Claim DAG with dependencies, status transitions, proof artifacts, empirical validation records, and acceptance rules. & Theory benchmark results plus ablation removing claim-state tracking; manuscript overclaim audit. \\
+C3 & Coupled theory/experiment execution & Separate theory and empirical-validation tracks with shared goals, cross-track dependencies, and merge validation. & Experiment and open-ended ML research benchmarks; ablation removing cross-track coupling. \\
+C4 & Typed gates and repair routing & Artifact gates, math acceptance validation, cross-track validation, paper traceability, review verdicts, and deterministic routing of failures. & Gate ablation; failure-mode accounting; repair count and artifact-validity rates. \\
+C5 & Councils as quality mechanisms & Sandboxed cross-model counsel plus persona councils covering rigor, novelty, practicality, narrative, and empirical grounding. & Council ablation on proposal, experiment, theory, and writeup tasks; judge and human-review deltas. \\
+C6 & Traceable manuscript production & Paper contracts, claim traceability, accepted-claims policy, reviewer feedback, copyedit and validation artifacts. & PaperBench/CORE-Bench/MLR-Bench results; traceability-contract ablation. \\
+C7 & Benchmark-routable modularity & Subgraphs can be isolated and evaluated on benchmarks for planning, proof/theory, experimentation, reproducibility, and writing. & Benchmark-to-subgraph matrix with official metrics and no new benchmark invention. \\
+\bottomrule
+\end{longtable}
+
+\section*{How To Use The Muon Case Study}
+
+Muon should be presented as a \textbf{case study and stress test}, not as the sole proof of \pai{} superiority. The report should use Muon to show that \pai{} can coordinate theory and empirical validation in one research workspace, produce evidence-bearing figures and theorem artifacts, and expose unresolved gaps through claim-state and review mechanisms.
+
+Claims to make:
+\begin{itemize}
+  \item \core{} Muon demonstrates an integrated theory-plus-empirical workflow on a realistic ML-theory problem.
+  \item \core{} Muon demonstrates conservative artifact tracking: partially validated claims remain caveated rather than promoted.
+  \item \core{} Muon demonstrates that councils and review gates can surface serious objections and residual blockers.
+\end{itemize}
+
+Claims to avoid unless new evidence is produced:
+\begin{itemize}
+  \item \risk{} Do not claim Muon alone proves \pai{} is superior to existing research agents.
+  \item \risk{} Do not claim fully accepted theorem completion when the preserved claim graph does not support that status.
+  \item \risk{} Do not claim live milestone blocking was demonstrated by preserved runs unless logs show the gate was enabled and used.
+  \item \risk{} Do not use ``empirical falsification'' as the user-facing framing; use \textbf{empirical validation}, numerical sanity checks, and counterexample search only where technically appropriate.
+\end{itemize}
+
+\begin{landscape}
+\section*{Literature Positioning Matrix}
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.12\linewidth} >{\raggedright\arraybackslash}p{0.10\linewidth} >{\raggedright\arraybackslash}p{0.13\linewidth} >{\raggedright\arraybackslash}p{0.12\linewidth} >{\raggedright\arraybackslash}p{0.12\linewidth} >{\raggedright\arraybackslash}p{0.14\linewidth} >{\raggedright\arraybackslash}p{0.13\linewidth}}
+\toprule
+\textbf{System / Benchmark} & \textbf{Human Role} & \textbf{Primary Domain} & \textbf{Theory Support} & \textbf{Empirical Support} & \textbf{Gates / Traceability} & \textbf{\pai{} Contrast} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{System / Benchmark} & \textbf{Human Role} & \textbf{Primary Domain} & \textbf{Theory Support} & \textbf{Empirical Support} & \textbf{Gates / Traceability} & \textbf{\pai{} Contrast} \\
+\midrule
+\endhead
+AI Scientist & Fully autonomous & Open-ended ML paper generation & Limited; not ML-theory claim lifecycle & Runs experiments and writes papers & Simulated review; weaker typed claim traceability & \pai{} emphasizes human-on-the-loop control, claim DAGs, typed gates, and theory/empirical validation coupling. \\
+AI Scientist-v2 & Fully autonomous & Workshop-level automated discovery & Agentic tree search, mainly experiment-centered & Stronger autonomous experiment loop & Review and tree-search artifacts & \pai{} borrows the ambition of systematized discovery but narrows to auditable ML-theory work with human steering. \\
+AI co-scientist & Human-collaborative & Biomedical hypothesis generation & Hypothesis debate, not theorem status tracking & Validation occurs in downstream scientific context & Multi-agent generate/debate/evolve & \pai{} targets ML theory and integrates proof-like claims, empirical validation, and manuscript traceability. \\
+AIDE & Autonomous agent scaffold & Data science / ML engineering & None as first-class theory object & Strong ML task execution & Iterative coding/evaluation loop & \pai{} covers experiment work but adds theory subgraphs, claim states, gates, councils, and writeup traceability. \\
+MLAgentBench & Benchmark & ML experimentation & None & Official task success and experiment iteration & Benchmark scoring & Evaluates \pai{} experiment design, execution, verification, and transcription subgraph. \\
+MLE-bench & Benchmark & Kaggle-style ML engineering & None & Official competition scores & Official benchmark grading & Evaluates empirical engineering capability, not the full \pai{} theory-control contribution. \\
+MLR-Bench & Benchmark / system & Open-ended ML research & Indirect via research tasks & Proposal, experiment, paper quality & MLR-Judge rubrics & Natural benchmark for \pai{} planning, experiment, writeup, and review subgraphs. \\
+MLGym & Benchmark / environment & ML research agents & Mostly empirical/algorithmic & Interactive ML task environment & Environment-level scoring & Evaluates iterative experiment subgraphs and repair behavior. \\
+MLRC-Bench & Benchmark & ML research competitions & Mostly method development & Competition-style research progress & Official challenge scoring & Good stress test for full or near-full \pai{} without inventing tasks. \\
+PaperBench & Benchmark & Replicating AI research papers & Indirect, paper-dependent & Replication artifacts & Rubric-based replication scoring & Evaluates research replication, artifact completeness, and paper-to-code discipline. \\
+CORE-Bench & Benchmark & Computational reproducibility & Paper-dependent & Reproducibility execution & Reproduction scoring & Evaluates artifact validity and reproducibility gates. \\
+ProofNet / miniF2F / LeanDojo / PutnamBench & Benchmarks & Formal theorem proving & Strong formal proof scoring & None or limited & Proof assistant checks & Stretch benchmarks for theory subgraph only; require faithful Lean/formal adapter. \\
+TheoremQA & Benchmark & Theorem application QA & Theorem selection and reasoning & None & Answer-level scoring & Near-term theory-reasoning benchmark that avoids requiring full Lean integration. \\
+AlphaGeometry & Domain system & Olympiad geometry & Strong neuro-symbolic proof search & None & Domain-specific proof search & \pai{} is not a specialized geometry solver; it is a general ML-theory research workflow. \\
+FunSearch & Domain system & Program-search discovery & Search over programs / specifications & Evaluator-based validation & Program evaluator loop & \pai{} differs by coordinating human-steered ML-theory claims, experiments, and manuscript traceability. \\
+\bottomrule
+\end{longtable}
+\normalsize
+\end{landscape}
+
+\section*{Benchmark Principles}
+
+\begin{enumerate}
+  \item Use existing benchmark tasks, splits, inputs, and official metrics. Do not create new benchmark problems.
+  \item Route each benchmark through the narrowest \pai{} subgraph that corresponds to the benchmarked capability.
+  \item Report official benchmark metrics first. Report \pai{} diagnostics only as secondary measurements.
+  \item Do not aggregate unrelated benchmarks into a single headline number.
+  \item Treat failed runs as data. Every failure must be classified as infrastructure failure, benchmark-adapter failure, or agent/system failure.
+  \item Keep model, token, wall-clock, and tool budgets matched across Full \pai{} and ablations wherever possible.
+\end{enumerate}
+
+\begin{landscape}
+\section*{Benchmark-to-Subgraph Matrix}
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.11\linewidth} >{\raggedright\arraybackslash}p{0.11\linewidth} >{\raggedright\arraybackslash}p{0.16\linewidth} >{\raggedright\arraybackslash}p{0.16\linewidth} >{\raggedright\arraybackslash}p{0.14\linewidth} >{\raggedright\arraybackslash}p{0.10\linewidth} >{\raggedright\arraybackslash}p{0.10\linewidth}}
+\toprule
+\textbf{Capability} & \textbf{Benchmark} & \textbf{\pai{} Subgraph} & \textbf{Adapter Rule} & \textbf{Primary Metrics} & \textbf{Secondary Diagnostics} & \textbf{Priority} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Capability} & \textbf{Benchmark} & \textbf{\pai{} Subgraph} & \textbf{Adapter Rule} & \textbf{Primary Metrics} & \textbf{Secondary Diagnostics} & \textbf{Priority} \\
+\midrule
+\endhead
+Study planning / proposal formation & MLR-Bench proposal/planning tasks & Literature review, persona council, brainstorm, formalize-goals, research-plan writeup & Preserve official task prompt and rubric; stop after proposal/plan artifact unless benchmark requires full paper. & MLR-Judge or official rubric scores for novelty, feasibility, clarity, and plan quality. & Council disagreement, gate pass rate, human steering count, cost, runtime. & \core{} \\
+Theory reasoning / theorem application & TheoremQA & Math literature, proposer, prover, rigorous verifier, empirical-validation where relevant & Convert each question into a theory-reasoning work item; final answer must be benchmark-compatible. & Exact/normalized answer accuracy and official scoring. & Claim states, verifier objections, repair count, unsupported-claim rate. & \core{} \\
+Informal proof generation / critique & ProofNet & Math proposer, prover, rigorous verifier, claim graph & Use natural-language theorem/proof fields; only use formal Lean scoring if adapter preserves official setup. & Natural-language proof quality or official formal success when available. & Status transition accuracy, proof-gap flags, false acceptance rate. & \core{} for informal, \tagstretch{} for formal \\
+Formal theorem proving & LeanDojo, miniF2F, PutnamBench & Math prover plus formal-proof adapter & Run only after Lean environment and official evaluator are validated; no custom scoring. & Pass@k / proof-check success under official evaluator. & Search failures, proof repair attempts, claim-state calibration. & \tagstretch{} \\
+Experiment design and empirical validation & MLAgentBench & Experiment literature, design, experimentation, verification, transcription & Preserve official task setup; allow \pai{} to plan, run, analyze, and verify experiments. & Official success rate and task score. & Valid experiment iterations, verification-pass rate, cost, runtime. & \core{} \\
+Iterative ML research tasks & MLGym-Bench & Experiment track plus repair loop & Use official environment and rewards; log each repair cycle. & Official task reward/score. & Gate failures, repair routing, number of iterations. & \core{} \\
+Budget-capped ML engineering & MLE-bench subset & Experiment track with optional writeup summary & Use official subset/order and scoring; report subset rationale before running. & Official competition percentile/medal proxy and score. & Cost-normalized score, runtime, failed submissions. & \core{} subset, \tagstretch{} full \\
+Open-ended ML research & MLR-Bench full tasks & Planning, experiment, writeup, reviewer, validation & Route full task through relevant \pai{} stages; preserve official judge settings. & Official judge score and review dimensions. & Contribution-trace completeness, human steering, repair count. & \core{} \\
+Research competitions & MLRC-Bench & Planning, experiment, verification, writeup & Use official challenge setup where infrastructure is available. & Official challenge progress / score. & Gap closure relative to baseline, cost, runtime. & \tagstretch{} \\
+Computational reproducibility & CORE-Bench & Resource preparation, experimentation, verification, paper-contract checks & Preserve official reproduction task and grader. & Official reproducibility score. & Missing artifact rate, verification report quality, repair count. & \core{} \\
+Paper replication & PaperBench or shorter official tier & Literature, resource prep, experiment, writeup, review & Use official benchmark/rubric; choose shorter tier if full benchmark is infeasible. & Official replication score. & Traceability completeness, reviewer score, artifact validity. & \tagstretch{} \\
+\bottomrule
+\end{longtable}
+\normalsize
+\end{landscape}
+
+\section*{Ablation Plan}
+
+All ablations should be run on the same task set as Full \pai{} with matched model family, maximum tokens, wall-clock budget, tool access, and compute budget whenever possible. If an ablation disables a component that normally consumes model calls, the unused budget should be reallocated to the main agent so that quality differences are not explained merely by total test-time compute.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.17\textwidth} >{\raggedright\arraybackslash}p{0.30\textwidth} >{\raggedright\arraybackslash}p{0.24\textwidth} >{\raggedright\arraybackslash}p{0.15\textwidth}}
+\toprule
+\textbf{Condition} & \textbf{Disabled or Changed Mechanism} & \textbf{Primary Question} & \textbf{Priority} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Condition} & \textbf{Disabled or Changed Mechanism} & \textbf{Primary Question} & \textbf{Priority} \\
+\midrule
+\endhead
+Full \pai{} & All typed gates, claim graph, councils, coupled tracks, reviewer routing, traceability, and human steering enabled. & Reference condition for all paired comparisons. & \core{} \\
+No Human Steering & Milestone gates use default autonomous continuation; human decisions are not injected. & Does strategic human steering improve final quality per compute dollar on hard tasks? & \core{} \\
+No Councils & Disable persona council and cross-model counsel; reallocate budget to main agent. & Do councils improve novelty, rigor, empirical grounding, and narrative quality? & \core{} \\
+No Typed Gates & Artifact validation and repair routing are disabled; stages pass artifacts forward. & Do gates reduce broken artifacts, unsupported claims, and late-stage failures? & \core{} \\
+No Claim-State Tracking & Replace claim DAG and status transitions with freeform notes. & Does claim-state tracking improve theorem calibration, proof-gap detection, and manuscript honesty? & \core{} \\
+No Coupled Tracks & Theory and experiment tracks run independently; no cross-track dependencies or merge validation. & Does coupling improve empirical-validation alignment and reduce theory/experiment contradictions? & \core{} \\
+No Traceability Contract & Paper contract and claim-traceability checks are disabled for writeup. & Does traceability reduce overclaiming and unsupported manuscript claims? & \core{} \\
+Single-Agent Baseline & One ReAct-style agent receives same tools and total budget but no specialized subgraphs. & Is \pai{}'s graph composition better than a strong single-agent scaffold? & \core{} \\
+No Empirical Validation Layer & Theory track produces proofs and writeup without numerical sanity checks or empirical-validation artifacts. & Does empirical validation catch theory mistakes or improve calibrated claims? & \tagstretch{} \\
+No Reviewer-Routed Repair & Reviewer feedback is collected but not routed to theory/experiment/writeup repair stages. & Does typed repair routing improve final artifact quality? & \tagstretch{} \\
+\bottomrule
+\end{longtable}
+
+\section*{Human-Steering Protocol}
+
+Human steering must be structured and logged so that it is measurable rather than anecdotal.
+
+\begin{itemize}
+  \item Gate opportunities: after planning, after theory/experiment merge, and before final writeup.
+  \item Allowed decisions: continue, request repair, narrow scope, reroute to theory, reroute to experiment, reroute to writeup, or stop.
+  \item Required log fields: task ID, condition, gate name, options shown, selected option, free-text rationale if any, human time in minutes, downstream repair stage, and final benchmark score.
+  \item Reporting: human time must be reported separately from compute cost and token cost.
+  \item Comparison: Full \pai{} should be paired with No Human Steering on the same tasks to estimate steering value.
+\end{itemize}
+
+\section*{Evaluation And Statistics}
+
+\begin{itemize}
+  \item Use official metrics and official judges wherever available.
+  \item Use paired comparisons: each benchmark task should run under Full \pai{} and every feasible ablation.
+  \item Use bootstrap confidence intervals over tasks for score deltas.
+  \item For judge-based benchmarks, use either the official judge configuration or at least two independent judge passes with fixed prompts and seeds where the benchmark permits.
+  \item Report cost, runtime, token count, tool calls, and human time for every condition.
+  \item Report missing and failed runs explicitly. Do not silently drop failures.
+  \item Stratify results by benchmark family rather than averaging theorem-proving, ML engineering, and paper-replication scores into one number.
+  \item Include a preregistered run matrix in the report appendix before launching the full experiment suite.
+\end{itemize}
+
+\section*{Recommended Run Matrix}
+
+The first launch should be budget-aware and broad enough to test the system story before scaling. A suggested minimum viable matrix:
+
+\begin{itemize}
+  \item \core{} MLR-Bench planning/proposal: 20 tasks, Full \pai{}, Single-Agent, No Councils, No Typed Gates.
+  \item \core{} TheoremQA: 100 questions stratified by topic, Full \pai{}, Single-Agent, No Claim-State Tracking, No Empirical Validation Layer.
+  \item \core{} ProofNet informal proof subset: 50 examples, Full \pai{}, Single-Agent, No Claim-State Tracking.
+  \item \core{} MLAgentBench: all feasible tasks, Full \pai{}, Single-Agent, No Typed Gates, No Councils.
+  \item \core{} MLGym-Bench: 10 tasks, Full \pai{}, Single-Agent, No Coupled Tracks, No Typed Gates.
+  \item \core{} MLE-bench: budget-capped subset of 10 competitions using official order, Full \pai{} and Single-Agent only for the first pass.
+  \item \core{} CORE-Bench: 10 tasks, Full \pai{}, Single-Agent, No Traceability Contract.
+  \item \tagstretch{} PaperBench: shorter official tier or 3 full tasks, Full \pai{} and Single-Agent only.
+  \item \tagstretch{} LeanDojo/miniF2F/PutnamBench: launch only after adapter validation on a smoke-test split.
+\end{itemize}
+
+\section*{Report Integration Plan}
+
+After benchmark and ablation results exist, update the technical report as follows:
+
+\begin{enumerate}
+  \item Rewrite the introduction around human-on-the-loop ML-theory research control, not generic autonomous science.
+  \item Add a system contribution table mapping each novelty claim C1--C7 to a repo mechanism, benchmark evidence, ablation evidence, and remaining limitation.
+  \item Add a benchmark section organized by subgraph: planning, theory, empirical validation, open-ended ML research, reproducibility, and paper production.
+  \item Add an ablation section testing gates, councils, claim tracking, coupled tracks, traceability, and human steering.
+  \item Keep Muon as the integrated case study showing theory-plus-empirical workflow and honest gap tracking.
+  \item Add a limitations section that distinguishes implemented capability, benchmark evidence, and Muon evidence.
+  \item Include all run logs, task IDs, seeds, cost summaries, human-gate decisions, and adapter versions in an appendix or artifact bundle.
+\end{enumerate}
+
+\section*{Plan Document Implementation}
+
+The clean LaTeX plan should live in \texttt{pAI\_Technical\_Report/Report\_Plans} and compile directly with:
+
+\begin{quote}
+\small
+\texttt{PATH=\$HOME/.local/bin:\$PATH}\\
+\texttt{latexmk -pdf -interaction=nonstopmode -halt-on-error}\\
+\texttt{pAI\_NeurIPS\_Benchmark\_Ablation\_Plan.tex}
+\end{quote}
+
+The document uses \texttt{article}, \texttt{geometry}, \texttt{hyperref}, \texttt{booktabs}, \texttt{tabularx}, \texttt{longtable}, \texttt{array}, \texttt{enumitem}, \texttt{xcolor}, and \texttt{pdflscape}. Wide comparison matrices are placed on landscape pages. Status tags are used as follows: \core{} required, \tagstretch{} useful if infrastructure and budget permit, \defer{} explicitly out of scope for the first run, and \risk{} a known failure mode or overclaiming risk.
+
+\section*{Timeline}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.17\textwidth} >{\raggedright\arraybackslash}p{0.34\textwidth} >{\raggedright\arraybackslash}p{0.39\textwidth}}
+\toprule
+\textbf{Phase} & \textbf{Work} & \textbf{Exit Criteria} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Phase} & \textbf{Work} & \textbf{Exit Criteria} \\
+\midrule
+\endhead
+Phase 0 & Freeze benchmark list, adapter contracts, run matrix, and ablation definitions. & This PDF is approved; no new benchmark invention remains in scope. \\
+Phase 1 & Implement and smoke-test adapters for MLR-Bench, TheoremQA, ProofNet informal subset, MLAgentBench, MLGym, MLE-bench subset, and CORE-Bench. & One task per benchmark family runs end-to-end and produces official metrics plus \pai{} diagnostics. \\
+Phase 2 & Run Full \pai{} and Single-Agent baseline across all core benchmark families. & Official scores, costs, and logs exist for every completed task; failures are classified. \\
+Phase 3 & Run component ablations on the core task matrix. & Paired ablation table exists for gates, councils, claim tracking, coupled tracks, traceability, and human steering. \\
+Phase 4 & Analyze results and update the report. & Tables, confidence intervals, case studies, and limitations are integrated into the NeurIPS draft. \\
+Phase 5 & Polish and submission checks. & Report compiles cleanly, claims map to evidence, anonymization passes, and source bundle reproduces. \\
+\bottomrule
+\end{longtable}
+
+\section*{Risks And Mitigations}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.24\textwidth} >{\raggedright\arraybackslash}p{0.34\textwidth} >{\raggedright\arraybackslash}p{0.32\textwidth}}
+\toprule
+\textbf{Risk} & \textbf{Why It Matters} & \textbf{Mitigation} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Risk} & \textbf{Why It Matters} & \textbf{Mitigation} \\
+\midrule
+\endhead
+Benchmark adapters change task semantics & Reviewers will reject custom benchmarks disguised as existing ones. & Preserve official inputs, scoring, and splits; document every adapter transformation. \\
+Formal-proof benchmarks are too expensive to integrate & Lean integration may dominate schedule. & Treat LeanDojo, miniF2F, and PutnamBench as stretch until a smoke test passes. Use TheoremQA and ProofNet informal tasks as core theory evidence. \\
+Judge-based scores are noisy & MLR-style scores can vary across judge runs. & Use official judge settings; add repeated judge passes where allowed; report confidence intervals. \\
+Ablations have unequal compute & Component removal can reduce test-time compute. & Reallocate saved budget to the main agent and report actual token/cost usage. \\
+Human steering is anecdotal & Human-on-the-loop is central to the claim. & Use fixed gate opportunities and structured decision logs. \\
+Muon is overinterpreted & The preserved Muon case has partial status and residual blockers. & Present Muon as a stress test and use benchmark/ablation evidence for system claims. \\
+Submission story becomes too broad & NeurIPS reviewers may see a kitchen-sink system paper. & Lead with seven contribution claims and map every result to one of them. \\
+\bottomrule
+\end{longtable}
+
+\section*{Acceptance Checks}
+
+\begin{itemize}
+  \item The plan PDF compiles cleanly from the LaTeX source.
+  \item Every benchmark in the plan is existing and externally defined.
+  \item Every benchmark is mapped to a specific \pai{} subgraph and official metric.
+  \item Every ablation has a control condition, changed mechanism, budget policy, and measured outcome.
+  \item Human-steering data is structured and auditable.
+  \item The Muon case study is framed as supporting evidence, not the sole benchmark.
+  \item The final technical report contains no unsupported claims of fully accepted theorem completion or demonstrated live milestone blocking unless new evidence is added.
+  \item The final report separates official benchmark scores from \pai{} diagnostics.
+\end{itemize}
+
+\section*{Source Links}
+
+\small
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.25\textwidth} >{\raggedright\arraybackslash}p{0.65\textwidth}}
+\toprule
+\textbf{Reference} & \textbf{URL} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Reference} & \textbf{URL} \\
+\midrule
+\endhead
+AI Scientist & \url{https://arxiv.org/abs/2408.06292} \\
+AI Scientist-v2 & \url{https://arxiv.org/abs/2504.08066} \\
+AI co-scientist & \url{https://arxiv.org/abs/2502.18864} \\
+AIDE & \url{https://arxiv.org/abs/2502.13138} \\
+MLE-bench & \url{https://openai.com/index/mle-bench/} \\
+MLAgentBench & \url{https://arxiv.org/abs/2310.03302} \\
+MLR-Bench & \url{https://arxiv.org/abs/2505.19955} \\
+MLGym & \url{https://arxiv.org/abs/2502.14499} \\
+MLRC-Bench & \url{https://arxiv.org/abs/2504.09702} \\
+PaperBench & \url{https://openai.com/index/paperbench/} \\
+CORE-Bench & \url{https://openreview.net/forum?id=BsMMc4MEGS} \\
+ProofNet & \url{https://arxiv.org/abs/2302.12433} \\
+LeanDojo & \url{https://arxiv.org/abs/2306.15626} \\
+miniF2F & \url{https://arxiv.org/abs/2109.00110} \\
+PutnamBench & \url{https://arxiv.org/abs/2407.11214} \\
+TheoremQA & \url{https://openreview.net/forum?id=Wom397PB55} \\
+AlphaGeometry & \url{https://www.nature.com/articles/s41586-023-06747-5} \\
+FunSearch & \url{https://www.nature.com/articles/s41586-023-06924-6} \\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\section*{Assumptions}
+
+\begin{itemize}
+  \item The objective is to maximize NeurIPS acceptance odds, not to guarantee acceptance.
+  \item Existing benchmarks must be used; \pai{}-specific metrics are diagnostics, not new benchmark definitions.
+  \item Formal Lean-based benchmarks are stretch unless a faithful official-evaluator adapter is available.
+  \item Human steering is evaluated with structured, logged gate decisions.
+  \item Muon remains a case study, while benchmark and ablation evidence carry the main system-evidence burden.
+\end{itemize}
+
+\end{document}
