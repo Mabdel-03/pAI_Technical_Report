@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1777014574.58315 "main.aux" "main.bbl" "main" 1777014897.71347 0
+["bibtex main"] 1777015335.2443 "main.aux" "main.bbl" "main" 1777015335.84615 0
   "./references.bib" 1777014525.68957 4190 f470d9adb062b81d36195e8e4db6fe1b ""
   "/orcd/home/002/mabdel03/.TinyTeX/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1777014897.5879 10903 99d7c9cffcc432d572ea3dbec2c28740 "pdflatex"
+  "main.aux" 1777015335.76611 10903 d2a9fd430ee9ea24dbb085adc5f033bf "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1777014896.87881 "main.tex" "main.pdf" "main" 1777014897.71399 0
+["pdflatex"] 1777015335.26504 "main.tex" "main.pdf" "main" 1777015335.84693 0
   "/orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm" 1136768653 1292 bd42be2f344128bff6d35d98474adfe3 ""
   "/orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/tfm/adobe/courier/pcrr8t.tfm" 1136768653 1384 4632f5e54900a7dadbb83f555bc61e56 ""
@@ -130,11 +130,11 @@
   "figures/fig_sign_criterion.pdf" 1777014328.90192 257154 ba95cfe5bf0a98db2bded64a88c04b18 ""
   "figures/fig_theorem_a_validation.pdf" 1777014328.88792 36397 edc8784cb08ec6c90193269f6d001a2f ""
   "figures/fig_theorem_b_bcrit.pdf" 1777014328.88992 45055 699669c28f1afc3db1468237090d64a8 ""
-  "figures/pai_system_graph.pdf" 1777014563.1875 39279 96b07afd462f45ead2ad8a3869e97f82 ""
-  "main.aux" 1777014897.5879 10903 99d7c9cffcc432d572ea3dbec2c28740 "pdflatex"
-  "main.bbl" 1777014574.59548 3227 132a342e875d3ade0633628c6f60b794 "bibtex main"
-  "main.out" 1777014897.5889 2499 d9b063299319a55e9c9e96a6bdd11afb "pdflatex"
-  "main.tex" 1777014600.98343 23395 fce7c2893e09f02e30decd76ea58f1ff ""
+  "figures/pai_system_graph.pdf" 1777015260.60724 44284 5a8dbd2fdb19459df99472c967c03616 ""
+  "main.aux" 1777015335.76611 10903 d2a9fd430ee9ea24dbb085adc5f033bf "pdflatex"
+  "main.bbl" 1777015335.26011 3227 132a342e875d3ade0633628c6f60b794 "bibtex main"
+  "main.out" 1777015335.76611 2499 d9b063299319a55e9c9e96a6bdd11afb "pdflatex"
+  "main.tex" 1777015310.26616 23462 402059fb095f0d04e5f5fafb68e5bbe4 ""
   "neurips_2025.sty" 1777014757.54215 1609 2f5e09ba1042a76704f3673f758ca0b9 ""
   (generated)
   "main.aux"

@@ -8,7 +8,9 @@
 \begin{document}
 \begin{center}
 \begin{tikzpicture}[
-  font=\sffamily\scriptsize,
+  x=1in,
+  y=1in,
+  font=\sffamily\large,
   >={Stealth[length=2.0mm]},
   stage/.style={rectangle,rounded corners=2pt,draw=black!65,fill=white,
     minimum width=1.46in,minimum height=0.37in,align=center,inner sep=3pt},
@@ -19,11 +21,11 @@
   lane/.style={rectangle,rounded corners=4pt,draw=black!30,inner sep=8pt},
   arr/.style={->,line width=0.7pt,black!75},
   soft/.style={->,line width=0.65pt,dashed,black!55},
-  label/.style={font=\sffamily\bfseries\small,anchor=west}
+  label/.style={font=\sffamily\bfseries\Large,anchor=west}
 ]
 
 \node[label] at (-5.12,3.74) {pAI research-to-manuscript graph};
-\node[font=\sffamily\footnotesize,anchor=west,text=black!70] at (-5.12,3.43)
+\node[font=\sffamily\normalsize,anchor=west,text=black!70] at (-5.12,3.43)
   {Typed artifacts move left to right; gates block or redirect; theory and experiment exchange only claim-state updates.};
 
 % Setup lane
@@ -47,12 +49,12 @@
 \node[stage,fill=green!9] (e4) [right=0.35in of e3] {Figures and\\result tables};
 
 % Merge and manuscript lane
-\node[gate] (merge) at (1.16,-1.00) {track\\merge};
+\node[gate] (merge) at (-1.65,-1.00) {track\\merge};
 \node[human] (m2) [right=0.18in of merge] {M2\\pause};
 \node[stage,fill=teal!10] (formal) [right=0.28in of m2] {Formalise\\results};
 \node[gate] (duality) [right=0.24in of formal] {duality\\gate};
 \node[human] (m3) [right=0.18in of duality] {M3\\pause};
-\node[stage,fill=purple!8] (write) at (-1.62,-2.28) {Resource prep\\and paper contract};
+\node[stage,fill=purple!8] (write) at (-4.15,-2.28) {Resource prep\\and paper contract};
 \node[stage,fill=purple!8] (draft) [right=0.35in of write] {Writeup and\\proofreading};
 \node[stage,fill=purple!8] (review) [right=0.35in of draft] {Five-reviewer\\ensemble};
 \node[gate] (finalg) [right=0.25in of review] {review\\gate};
@@ -85,8 +87,8 @@
 \draw[arr] (e1) -- (e2);
 \draw[arr] (e2) -- (e3);
 \draw[arr] (e3) -- (e4);
-\draw[soft] (t2.south) -- node[right,font=\tiny,align=center] {predictions} (e2.north);
-\draw[soft] (e3.north) -- node[left,font=\tiny,align=center] {counterexamples\\and metrics} (t3.south);
+\draw[soft] (t2.south) -- node[right,font=\scriptsize,align=center] {predictions} (e2.north);
+\draw[soft] (e3.north) -- node[left,font=\scriptsize,align=center] {counterexamples\\and metrics} (t3.south);
 
 % Merge and manuscript
 \draw[arr] (t4.south) |- (merge.west);
@@ -108,12 +110,12 @@
 \draw[soft] (litg.north) .. controls +(0,0.50) and +(0,0.50) .. (lit.north);
 
 % Legend
-\node[stage,minimum width=0.62in,minimum height=0.23in,fill=white] (la) at (-4.58,-3.58) {agent};
+\node[stage,minimum width=0.62in,minimum height=0.23in,fill=white,font=\sffamily\footnotesize] (la) at (-4.58,-3.58) {agent};
 \node[gate,minimum width=0.38in,minimum height=0.20in] (lg) [right=0.22in of la] {};
-\node[human,minimum width=0.48in,minimum height=0.22in] (lh) [right=0.28in of lg] {human};
+\node[human,minimum width=0.48in,minimum height=0.22in,font=\sffamily\footnotesize] (lh) [right=0.28in of lg] {human};
 \draw[arr] ($(lh.east)+(0.22,0)$) -- +(0.55,0);
 \draw[soft] ($(lh.east)+(1.03,0)$) -- +(0.55,0);
-\node[anchor=west,font=\sffamily\tiny,text=black!70] at ($(lh.east)+(1.75,0)$)
+\node[anchor=west,font=\sffamily\footnotesize,text=black!70] at ($(lh.east)+(1.75,0)$)
  {solid: required transition; dashed: feedback or state exchange};
 
 \end{tikzpicture}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.14)  24 APR 2026 03:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.14)  24 APR 2026 03:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -489,7 +489,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 File: figures/pai_system_graph.pdf Graphic file (type pdf)
 <use figures/pai_system_graph.pdf>
 Package pdftex.def Info: figures/pai_system_graph.pdf  used on input line 60.
-(pdftex.def)             Requested size: 397.48499pt x 307.15611pt.
+(pdftex.def)             Requested size: 469.02936pt x 355.18773pt.
  [2 <./figures/pai_system_graph.pdf>] (/orcd/home/002/mabdel03/.TinyTeX/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
@@ -505,29 +505,29 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/orcd/home/002/mabdel03/.TinyTeX/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-<figures/fig_theorem_a_validation.pdf, id=254, 953.96967pt x 293.48521pt>
+<figures/fig_theorem_a_validation.pdf, id=256, 953.96967pt x 293.48521pt>
 File: figures/fig_theorem_a_validation.pdf Graphic file (type pdf)
 <use figures/fig_theorem_a_validation.pdf>
 Package pdftex.def Info: figures/fig_theorem_a_validation.pdf  used on input line 123.
 (pdftex.def)             Requested size: 377.60951pt x 116.16945pt.
-<figures/fig_sign_criterion.pdf, id=257, 1002.43369pt x 286.09258pt>
+<figures/fig_sign_criterion.pdf, id=259, 1002.43369pt x 286.09258pt>
 File: figures/fig_sign_criterion.pdf Graphic file (type pdf)
 <use figures/fig_sign_criterion.pdf>
 Package pdftex.def Info: figures/fig_sign_criterion.pdf  used on input line 130.
 (pdftex.def)             Requested size: 377.60951pt x 107.76901pt.
  [3] [4 <./figures/fig_theorem_a_validation.pdf> <./figures/fig_sign_criterion.pdf>]
-<figures/fig_theorem_b_bcrit.pdf, id=438, 929.22249pt x 292.63605pt>
+<figures/fig_theorem_b_bcrit.pdf, id=441, 929.22249pt x 292.63605pt>
 File: figures/fig_theorem_b_bcrit.pdf Graphic file (type pdf)
 <use figures/fig_theorem_b_bcrit.pdf>
 Package pdftex.def Info: figures/fig_theorem_b_bcrit.pdf  used on input line 169.
 (pdftex.def)             Requested size: 377.60951pt x 118.91882pt.
-<figures/fig_atsr_phase_diagram.pdf, id=440, 776.08089pt x 316.4373pt>
+<figures/fig_atsr_phase_diagram.pdf, id=443, 776.08089pt x 316.4373pt>
 File: figures/fig_atsr_phase_diagram.pdf Graphic file (type pdf)
 <use figures/fig_atsr_phase_diagram.pdf>
 Package pdftex.def Info: figures/fig_atsr_phase_diagram.pdf  used on input line 179.
 (pdftex.def)             Requested size: 377.60951pt x 153.96439pt.
  [5 <./figures/fig_theorem_b_bcrit.pdf> <./figures/fig_atsr_phase_diagram.pdf>]
-<figures/fig_h3_nanogpt.pdf, id=652, 783.59389pt x 337.58057pt>
+<figures/fig_h3_nanogpt.pdf, id=655, 783.59389pt x 337.58057pt>
 File: figures/fig_h3_nanogpt.pdf Graphic file (type pdf)
 <use figures/fig_h3_nanogpt.pdf>
 Package pdftex.def Info: figures/fig_h3_nanogpt.pdf  used on input line 195.
@@ -638,10 +638,10 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  75i,10n,79p,1251b,617s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (9 pages, 628609 bytes).
+Output written on main.pdf (9 pages, 633885 bytes).
 PDF statistics:
- 870 PDF objects out of 1000 (max. 8388607)
- 317 compressed objects within 4 object streams
+ 873 PDF objects out of 1000 (max. 8388607)
+ 318 compressed objects within 4 object streams
  60 named destinations out of 1000 (max. 500000)
- 40599 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 40605 words of extra memory for PDF output out of 42996 (max. 10000000)
 
