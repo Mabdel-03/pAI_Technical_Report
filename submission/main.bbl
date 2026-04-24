@@ -1,0 +1,69 @@
+\begin{thebibliography}{13}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Arora et~al.(2019)Arora, Cohen, Hu, and Luo]{arora2019implicit}
+Sanjeev Arora, Nadav Cohen, Wei Hu, and Yuping Luo.
+\newblock Implicit regularization in deep matrix factorization.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2019.
+
+\bibitem[Fan et~al.(2025)Fan, Schmidt, and Thrampoulidis]{fan2025muon}
+Chen Fan, Mark Schmidt, and Christos Thrampoulidis.
+\newblock Implicit bias of spectral descent and muon on multiclass separable data, 2025.
+
+\bibitem[Gottweis et~al.(2025)]{gottweis2025coscientist}
+Juraj Gottweis et~al.
+\newblock Towards an ai co-scientist, 2025.
+\newblock Preprint.
+
+\bibitem[Gronich and Vardi(2026)]{gronich2026muon}
+Eitan Gronich and Gal Vardi.
+\newblock The implicit bias of adam and muon on smooth homogeneous neural networks, 2026.
+
+\bibitem[Gunasekar et~al.(2018)Gunasekar, Lee, Soudry, and Srebro]{gunasekar2018implicitly}
+Suriya Gunasekar, Jason Lee, Daniel Soudry, and Nathan Srebro.
+\newblock Characterizing implicit bias in terms of optimization geometry.
+\newblock In \emph{Proceedings of the International Conference on Machine Learning}, 2018.
+
+\bibitem[Jiang et~al.(2025)]{jiang2025aide}
+Albert~Q. Jiang et~al.
+\newblock Aide: Ai-driven exploration in the space of code, 2025.
+\newblock Preprint.
+
+\bibitem[Jordan et~al.(2024)]{jordan2024muon}
+Keller Jordan et~al.
+\newblock Muon: A momentum orthogonalized optimizer for modern deep learning, 2024.
+\newblock Technical release.
+
+\bibitem[Loshchilov and Hutter(2019)]{loshchilov2017adamw}
+Ilya Loshchilov and Frank Hutter.
+\newblock Decoupled weight decay regularization.
+\newblock In \emph{Proceedings of the International Conference on Learning Representations}, 2019.
+
+\bibitem[Lu et~al.(2024)Lu, Lu, Lange, Foerster, Clune, and Ha]{lu2024aiscientist}
+Chris Lu, Cong Lu, Robert~Tjarko Lange, Jakob Foerster, Jeff Clune, and David Ha.
+\newblock The ai scientist: Towards fully automated open-ended scientific discovery, 2024.
+
+\bibitem[McCandlish et~al.(2018)McCandlish, Kaplan, Amodei, et~al.]{mccandlish2018empirical}
+Sam McCandlish, Jared Kaplan, Dario Amodei, et~al.
+\newblock An empirical model of large-batch training, 2018.
+
+\bibitem[Romera-Paredes et~al.(2024)Romera-Paredes, Barekatain, Novikov, et~al.]{romerapadres2024funsearch}
+Bernardino Romera-Paredes, Mohammadamin Barekatain, Alexander Novikov, et~al.
+\newblock Mathematical discoveries from program search with large language models.
+\newblock \emph{Nature}, 625:\penalty0 468--475, 2024.
+
+\bibitem[Trinh et~al.(2024)Trinh, Wu, Le, He, and Luong]{trinh2024alphageometry}
+Trieu~H. Trinh, Yuhuai Wu, Quoc~V. Le, He~He, and Thang Luong.
+\newblock Solving olympiad geometry without human demonstrations.
+\newblock \emph{Nature}, 625:\penalty0 476--482, 2024.
+
+\bibitem[Yamada et~al.(2025)]{yamada2025aiscientistv2}
+Yutaro Yamada et~al.
+\newblock The ai scientist-v2: Workshop-level automated scientific discovery via agentic tree search, 2025.
+\newblock Preprint.
+
+\end{thebibliography}

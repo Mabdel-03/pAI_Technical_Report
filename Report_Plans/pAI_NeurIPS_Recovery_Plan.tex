@@ -1,0 +1,175 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{amssymb}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!black,
+  urlcolor=blue!50!black
+}
+
+\setlist[itemize]{leftmargin=1.4em, itemsep=0.35em, topsep=0.35em}
+\setlength{\parskip}{0.45em}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{3em}
+
+\newcommand{\actioned}{\textbf{\textcolor{green!45!black}{[$\checkmark$ ACTIONED]}}}
+\newcommand{\partialdone}{\textbf{\textcolor{orange!75!black}{[PARTIAL]}}}
+\newcommand{\remaining}{\textbf{\textcolor{red!65!black}{[REMAINING]}}}
+\newcommand{\deferred}{\textbf{\textcolor{blue!65!black}{[DEFERRED]}}}
+\newcommand{\thissession}{\textbf{\textcolor{green!40!black}{[PLANNED THIS SESSION]}}}
+\newcommand{\asyncexternal}{\textbf{\textcolor{orange!70!black}{[ASYNC/EXTERNAL]}}}
+\newcommand{\optionalwork}{\textbf{\textcolor{blue!60!black}{[OPTIONAL IF TIME/BUDGET]}}}
+
+\title{pAI NeurIPS Recovery Plan}
+\author{Codex Working Plan}
+\date{April 24, 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Executive Summary}
+This document is the updated recovery plan for the pAI NeurIPS technical report after the evidence-only implementation pass on April 24, 2026. It now records which items were actioned in the anonymous submission artifact, which items were only partially satisfied by preserved evidence, and which items remain deferred because they require fresh API calls, new ablation launches, external proof verification, or additional theory work.
+
+\textbf{Status legend.} \actioned{} denotes completed work in this evidence-only session. \partialdone{} denotes work represented by a conservative replacement or incomplete preserved evidence. \remaining{} denotes a required item still open. \deferred{} denotes work intentionally left out of this no-fresh-runs pass. Historical planning tags \thissession{}, \asyncexternal{}, and \optionalwork{} are retained only where useful for provenance.
+
+\section*{Completion Status Update}
+\begin{itemize}
+  \item \actioned{} Produced the anonymous report PDF \texttt{pAI\_Technical\_Report\_NeurIPS2026\_anonymous.pdf} and source bundle \texttt{pAI\_Technical\_Report\_NeurIPS2026\_anonymous\_source.zip} in \texttt{pAI\_Technical\_Report/}.
+  \item \actioned{} Built a normalized submission tree under \texttt{pAI\_Technical\_Report/submission/} with \texttt{main.tex}, \texttt{references.bib}, \texttt{neurips\_2025.sty}, and \texttt{figures/}.
+  \item \actioned{} Replaced the dense in-source system graph with a clean single-page lane diagram, \texttt{figures/pai\_system\_graph.pdf}, and included it as the main system architecture figure.
+  \item \actioned{} Included evidence-backed Muon figures for implicit-regularizer validation, critical batch size, ATSR/weight decay, NanoGPT spectral profiling, and the sign criterion.
+  \item \actioned{} Repaired truthfulness blockers in the report: Frobenius contraction replaces conservation, theorem statements are caveated to preserved evidence, unsupported milestone-blocking claims are removed, and anonymization checks are clean.
+  \item \partialdone{} Cost and campaign-trace evidence were represented conservatively from preserved artifacts; missing fine-grained steer logs and runtime reconstruction remain open.
+  \item \deferred{} No fresh single-prompt baseline calls, no new ablation launches, no external proof verification, no anisotropic-theory upgrade, and no discrete-time validation were run in this evidence-only pass.
+\end{itemize}
+
+\section*{Audit Findings}
+\begin{itemize}
+  \item The authoritative evidence base for the Muon case study is the workspace rooted at \texttt{MSc\_Internal/results/muon\_v5\_iterate\_rigorous} at commit \texttt{03b2339}.
+  \item The strongest source files for the Muon outputs are \texttt{theory\_sections.tex}, \texttt{appendix\_proofs.tex}, \texttt{v5\_results.tex}, \texttt{theory\_track\_summary.json}, \texttt{experiment\_track\_summary.json}, \texttt{review\_verdict.json}, \texttt{budget\_state.json}, and \texttt{experiment\_metadata.json}.
+  \item The current pAI draft source bundle is not submission-grade. The zip contains only \texttt{main.tex} and \texttt{neurips.sty}, while the compiled PDF still contains many placeholders, unresolved references, and missing appendices.
+  \item The draft currently overclaims some campaign behavior. Repo evidence shows \texttt{enable\_milestone\_gates: false} in the Muon rigorous run artifacts, so the report must distinguish implemented system capability from what this campaign actually exercised.
+  \item Muon theory status is mixed but usable: the corrected Theorem A material is reportable; the isotropic Theorem B formula is reportable with explicit caveats; the anisotropic extension remains open unless later upgraded by a targeted theory run.
+  \item The Muon workspace contains stale fragments and optimistic summaries. These are useful for diffing but non-authoritative unless reconciled against the evidence-locked source set above.
+\end{itemize}
+
+\section*{Required Changes to the pAI Report}
+\subsection*{1. Evidence Lock and Source Normalization}
+\begin{itemize}
+  \item \actioned{} Freeze the evidence base to \texttt{MSc\_Internal/results/muon\_v5\_iterate\_rigorous} at commit \texttt{03b2339}.
+  \item \actioned{} Declare the authoritative Muon source files listed in the audit findings as the only sources allowed to drive theorem text, result text, and campaign-cost statements.
+  \item \actioned{} Treat stale \texttt{v5\_*}, \texttt{.bak}, and triumphalist summaries as non-authoritative unless explicitly reconciled.
+  \item \actioned{} Normalize the report source into a real submission tree with \texttt{main.tex}, merged bibliography, \texttt{figures/}, and integrated appendix-style evidence tables.
+\end{itemize}
+
+\subsection*{2. Truthfulness-Critical Repairs}
+\begin{itemize}
+  \item \actioned{} Correct Theorem 1(ii) everywhere in the pAI report: Frobenius contraction, not conservation.
+  \item \actioned{} Fill Theorem 1(iii), Theorem 2, and Proposition 3 directly from the authoritative Muon artifacts, with caveats for heuristic and proposed components.
+  \item \actioned{} Scope Theorem 2 honestly in the report: keep the isotropic formula with the heuristic caveat in the main text, and leave the anisotropic extension open unless it is later upgraded.
+  \item \actioned{} Remove unsupported claims that the Muon rigorous campaign demonstrated live milestone blocking or ``10 steers across 4 gates,'' because the preserved repo artifacts currently show milestone gates disabled.
+  \item \actioned{} Replace unsupported human-attention numbers with evidence-scoped cost/model-use statements and remaining-work flags.
+  \item \partialdone{} Rebuild the Lyapunov correction discussion from preserved artifacts and label missing original council evidence as a remaining limitation.
+\end{itemize}
+
+\subsection*{3. Empirical Evidence Package}
+\begin{itemize}
+  \item \deferred{} Run the single-prompt baseline, archive the raw outputs, and fill Table 3 with C1--C5 scoring. This was intentionally not run under evidence-only constraints.
+  \item \partialdone{} Rebuild Table 2 and Figure 2 as a verified campaign-state trace from logs and final artifacts. The report instead includes a conservative system graph, claim-evidence ledger, and remaining-work table because fine-grained steer logs were not recovered.
+  \item \partialdone{} Fill Section 6.3 cost, runtime, and model-usage numbers from preserved workspace logs. Preserved budget/model-use evidence was used; full runtime reconstruction remains open.
+  \item \actioned{} Add ATSR and weight-decay results and the associated figures from the Muon workspace.
+  \item \actioned{} Build an honest implementation-maturity table for the seven gates, including enforcement type and evidence location.
+\end{itemize}
+
+\subsection*{4. Ablations and Theory Follow-Ups}
+\begin{itemize}
+  \item \deferred{} Configure and launch the six partial ablation runs: \texttt{Full}, \texttt{No-Council}, and \texttt{No-Dual-Track} on held-out problems \texttt{P1} and \texttt{P2}. No new runs were launched.
+  \item \remaining{} Prioritize the run order as \texttt{Full-P1}, \texttt{Full-P2}, \texttt{No-Council-P1}, \texttt{No-Council-P2}, \texttt{No-Dual-Track-P1}, then \texttt{No-Dual-Track-P2}.
+  \item \remaining{} Write Appendix F with real partial ablation rows once fresh ablation outputs exist.
+  \item \deferred{} Launch a targeted anisotropic-theory sub-run by April 29, 2026 only if internal review still supports spending time or budget on that upgrade.
+  \item \deferred{} Launch discrete-time validation only after the core pAI technical-report blockers are closed.
+\end{itemize}
+
+\subsection*{5. Bibliography, Supplement Alignment, and Submission Readiness}
+\begin{itemize}
+  \item \partialdone{} Merge and rebuild the bibliography. The pAI report compiles with zero undefined citations; Muon supplement cleanup remains separate work.
+  \item \remaining{} Remove stale Frobenius-conservation wording from the Muon supplement and keep its epistemic status aligned with the pAI report.
+  \item \actioned{} Rewrite the abstract and contribution list with every contribution tied to a concrete table, figure, or evidence ledger entry.
+  \item \actioned{} Prepare anonymization and final compile passes as part of the submission pipeline.
+  \item \deferred{} Send the external proof-verification package by April 25, 2026 and integrate any responses received by May 2, 2026.
+\end{itemize}
+
+\section*{Required Changes to the Muon Supplement}
+\begin{itemize}
+  \item \remaining{} Verify there is no stale ``conservation'' wording left anywhere in the Muon v5 supplement.
+  \item \remaining{} Resolve all remaining citation placeholders in the Muon supplement using the merged bibliography produced for the pAI report.
+  \item \remaining{} Keep the supplement's theory-status language aligned with the report: Theorem A corrected and usable, isotropic Theorem B usable with caveat, anisotropic extension open unless separately upgraded.
+  \item \deferred{} Upgrade the anisotropic extension only through a targeted theory follow-up, not by optimistic rewriting.
+  \item \deferred{} Add direct discrete-time validation only if the core pAI report tasks are already closed.
+\end{itemize}
+
+\section*{Date-Ordered Schedule}
+\begin{itemize}
+  \item \textbf{April 24--25, 2026:} evidence lock, source normalization, theorem corrections, baseline Table 3, campaign trace extraction, cost parsing, and Muon wording cleanup.
+  \item \textbf{April 26--27, 2026:} bibliography rebuild, Appendix G reconstruction, theorem and proposition transcription, and Muon citation cleanup.
+  \item \textbf{April 27--30, 2026:} ablation setup and launches, Appendix F drafting, ATSR insertion, Appendix E maturity table, and Section 6 integration.
+  \item \textbf{May 1--3, 2026:} abstract and contribution rewrite, broader impact, checklist, anonymization, and final compile hygiene.
+  \item \textbf{May 4, 2026 AoE:} abstract submission.
+  \item \textbf{May 5--6, 2026 AoE:} final paper and supplement polish, submission package freeze, and full-paper submission.
+\end{itemize}
+
+\section*{Acceptance Checks}
+\begin{itemize}
+  \item This plan file must compile cleanly to PDF inside \texttt{pAI\_Technical\_Report/Report\_Plans}.
+  \item The plan PDF must visibly mark every task with \thissession{}, \asyncexternal{}, or \optionalwork{}.
+  \item The report acceptance bar is zero \texttt{[GAP]}, \texttt{[NUM]}, \texttt{[VERIFY]}, broken references, and unresolved citation placeholders.
+  \item All theorem, figure, abstract, and contribution claims must reconcile to the claim-evidence ledger.
+  \item Table 3 must be complete, and Appendix F must contain at least the two full-system rows even if later ablations remain in flight.
+  \item Cost and runtime numbers must reconcile to preserved logs.
+  \item Anonymization grep checks must pass on the final sources and PDF metadata before submission.
+\end{itemize}
+
+\section*{Session Scope Matrix}
+\small
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.27\textwidth} >{\raggedright\arraybackslash}p{0.22\textwidth} >{\raggedright\arraybackslash}p{0.41\textwidth}}
+\toprule
+\textbf{Workstream} & \textbf{Status} & \textbf{Scope in this Codex session} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Workstream} & \textbf{Status} & \textbf{Scope in this Codex session} \\
+\midrule
+\endhead
+Plan artifact creation & \thissession{} & Write this \LaTeX{} plan, compile it to PDF, and place both artifacts in \texttt{Report\_Plans}. \\
+Evidence lock and source normalization & \thissession{} & Lock the authoritative Muon workspace and use it to drive report edits and extraction work. \\
+Truthfulness-critical report fixes & \thissession{} & Correct theorem statements, remove unsupported claims, and rebuild the Lyapunov narrative around preserved evidence. \\
+Baseline and campaign-evidence package & \thissession{} & Produce the single-prompt baseline, campaign-state trace, cost extraction, ATSR insertion, and Appendix E maturity table. \\
+Ablation package & \thissession{} & Configure and launch the six partial runs and prepare Appendix F to ship with partial results if necessary. \\
+Bibliography and supplement alignment & \thissession{} & Merge references, clean Muon wording, align epistemic status, and remove unresolved citations. \\
+Submission-ready polish & \thissession{} & Prepare abstract rewrite, contribution rewrite, anonymization, checklist, broader impact, and final compile pipeline. \\
+External proof verification & \asyncexternal{} & Prepare and send the package, then wait for external replies before integrating them. \\
+Targeted anisotropic upgrade & \optionalwork{} & Only attempt if core blockers are already closed and the targeted sub-run still looks worthwhile. \\
+Discrete-time validation & \optionalwork{} & Only attempt after the core report package is stable. \\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\section*{Assumptions and Defaults}
+\begin{itemize}
+  \item Repo artifacts are the only admissible evidence base for claims made in the plan and in the report.
+  \item This plan is additive and does not replace \texttt{pAI\_Technical\_Report\_Updates\_List.pdf}.
+  \item ``Implement now in this Codex session'' means the local manuscript, evidence-extraction, evaluation, ablation-launch, and supplement-alignment workstreams are in scope; only external expert responses remain outside direct session control.
+  \item This session is in implementation mode now, so the plan artifact itself is being created immediately rather than queued for a later planning phase.
+\end{itemize}
+
+\end{document}
