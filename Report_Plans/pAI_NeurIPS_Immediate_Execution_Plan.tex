@@ -1,0 +1,151 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!black,
+  urlcolor=blue!50!black
+}
+
+\setlist[itemize]{leftmargin=1.4em, itemsep=0.35em, topsep=0.35em}
+\setlength{\parskip}{0.45em}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{3em}
+\renewcommand{\arraystretch}{1.14}
+
+\newcommand{\core}{\textbf{\textcolor{green!45!black}{[CORE]}}}
+\newcommand{\queued}{\textbf{\textcolor{orange!80!black}{[QUEUED]}}}
+\newcommand{\guard}{\textbf{\textcolor{red!65!black}{[GUARDRAIL]}}}
+\newcommand{\done}{\textbf{\textcolor{blue!60!black}{[THIS SESSION]}}}
+
+\title{pAI NeurIPS Immediate Execution Plan}
+\author{Technical-Report Branch Execution Artifact}
+\date{April 24, 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Executive Summary}
+
+This document specifies the first implementation slice for the pAI NeurIPS benchmark and ablation program. All benchmark harnesses, smoke runs, ablation scaffolding, and experiment outputs are isolated from the shared MIT-researcher branch of \texttt{PoggioAI/PoggioAI\_MSc}.
+
+\textbf{Branch policy.} Benchmark implementation happens only on the technical-report branch
+\url{technical-report/neurips-benchmark-ablation} in the clean worktree
+\url{MSc_Internal_technical_report}. The existing dirty \texttt{MSc\_Internal} checkout remains untouched.
+
+\textbf{First execution target.} This session implements harness scaffolding and deterministic adapter smoke runs under a hard \texttt{\$25} cap. It does not launch the full MLR-Bench, MLE-bench, PaperBench, CORE-Bench, or Lean benchmark matrix.
+
+\section*{Artifacts}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.38\textwidth} >{\raggedright\arraybackslash}p{0.52\textwidth}}
+\toprule
+\textbf{Artifact} & \textbf{Purpose} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Artifact} & \textbf{Purpose} \\
+\midrule
+\endhead
+\url{pAI_NeurIPS_Immediate_Execution_Plan.tex/pdf} & This plan artifact in \texttt{pAI\_Technical\_Report/Report\_Plans}. \\
+\url{../MSc_Internal_technical_report} & Clean worktree for all benchmark and ablation code. \\
+\url{consortium/benchmarks/} & Reusable benchmark schema, registry, adapters, ablation conditions, and smoke runner. \\
+\url{consortium/cli/commands/benchmark.py} & \texttt{msc benchmark} CLI surface for listing, planning, smoking, and summarizing benchmark suites. \\
+\url{tests/test_benchmark_harness.py} & Targeted regression tests for registry coverage, budget guardrails, fixture labeling, outputs, and CLI behavior. \\
+\url{results/pai_neurips_benchmark_smoke_<timestamp>/} & Lightweight smoke evidence bundle written in the technical-report branch worktree. \\
+\bottomrule
+\end{longtable}
+
+\section*{Implementation Steps}
+
+\begin{enumerate}
+  \item \done{} Create a clean git worktree from \texttt{origin/MSc\_Internal} at \url{../MSc_Internal_technical_report}.
+  \item \done{} Create branch \url{technical-report/neurips-benchmark-ablation} and keep it isolated from the shared \texttt{MSc\_Internal} branch.
+  \item \core{} Implement schemas for benchmark families, ablation conditions, smoke tasks, run configs, run results, and failure classes.
+  \item \core{} Implement the benchmark registry for MLR-Bench, TheoremQA, ProofNet, MLAgentBench, MLGym, MLE-bench, CORE-Bench, PaperBench, LeanDojo, miniF2F, and PutnamBench.
+  \item \core{} Implement deterministic adapter smoke fixtures. These are explicitly labeled \texttt{adapter\_smoke\_fixture} and never reported as official benchmark scores.
+  \item \core{} Implement the \texttt{msc benchmark} command group.
+  \item \core{} Run targeted tests and CLI smoke commands.
+  \item \core{} Commit the branch-local harness, tests, and lightweight smoke evidence bundle.
+\end{enumerate}
+
+\section*{CLI Contract}
+
+\begin{itemize}
+  \item \texttt{msc benchmark list}: show registered benchmark families and ablation conditions.
+  \item \texttt{msc benchmark plan --suite smoke}: print the smoke matrix without execution.
+  \item \texttt{msc benchmark smoke --budget-usd 25}: write smoke outputs under \texttt{results/}.
+  \item \texttt{msc benchmark summarize --results-dir <dir>}: summarize a smoke evidence bundle.
+\end{itemize}
+
+\guard{} The smoke runner must fail closed when \texttt{--budget-usd} exceeds \texttt{--max-budget-usd}. The default maximum is \texttt{\$25}.
+
+\section*{Smoke Matrix}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.24\textwidth} >{\raggedright\arraybackslash}p{0.28\textwidth} >{\raggedright\arraybackslash}p{0.38\textwidth}}
+\toprule
+\textbf{Benchmark Family} & \textbf{Status} & \textbf{Smoke Meaning} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Benchmark Family} & \textbf{Status} & \textbf{Smoke Meaning} \\
+\midrule
+\endhead
+MLR-Bench & \core{} adapter smoke & Validate proposal-plan task routing and required planning fields. \\
+TheoremQA & \core{} adapter smoke & Validate theorem-question routing and claim-state result shape. \\
+ProofNet & \core{} adapter smoke & Validate informal proof and verifier-report handoff. \\
+MLAgentBench & \core{} adapter smoke & Validate experiment-design and verification result shape. \\
+CORE-Bench & \core{} adapter smoke & Validate reproducibility artifact ledger shape. \\
+MLGym & \queued{} & Registered; official environment required before launch. \\
+MLE-bench & \queued{} & Registered; budget-capped official subset required before launch. \\
+PaperBench & \queued{} & Registered; short official tier or feasible subset required before launch. \\
+LeanDojo / miniF2F / PutnamBench & \queued{} & Registered; Lean and official evaluators required before launch. \\
+\bottomrule
+\end{longtable}
+
+\section*{Expected Smoke Outputs}
+
+Each smoke run writes:
+
+\begin{itemize}
+  \item \texttt{suite\_manifest.json}
+  \item \texttt{run\_config.json}
+  \item \texttt{results.jsonl}
+  \item \texttt{summary.json}
+  \item \texttt{summary.md}
+  \item \texttt{remaining\_work.md}
+\end{itemize}
+
+The summary must state that official benchmark scores are not reported by smoke fixtures and that the full benchmark/ablation matrix remains queued.
+
+\section*{Acceptance Checks}
+
+\begin{itemize}
+  \item The existing \texttt{MSc\_Internal} checkout remains on branch \texttt{MSc\_Internal}.
+  \item The technical-report worktree is on \texttt{technical-report/neurips-benchmark-ablation}.
+  \item \texttt{pytest tests/test\_benchmark\_harness.py} passes in the technical-report worktree.
+  \item The four smoke commands run successfully: \texttt{msc benchmark list}; \texttt{msc benchmark plan --suite smoke}; \texttt{msc benchmark smoke --budget-usd 25}; and \texttt{msc benchmark summarize}.
+  \item \texttt{msc benchmark smoke --budget-usd 26 --max-budget-usd 25} fails closed.
+  \item No official benchmark scores are emitted by smoke fixtures.
+  \item No full benchmark matrix is launched in this session.
+  \item No secrets, heavyweight datasets, or API logs are committed.
+\end{itemize}
+
+\section*{Remaining Work}
+
+\begin{itemize}
+  \item Install and validate official benchmark environments.
+  \item Replace adapter smoke fixtures with official task loaders while preserving benchmark inputs, splits, and metrics.
+  \item Launch paired Full pAI and ablation runs after the smoke layer is stable.
+  \item Integrate official benchmark and ablation results into the NeurIPS technical report.
+\end{itemize}
+
+\end{document}

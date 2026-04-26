@@ -46,6 +46,8 @@ This plan reframes \pai{} as a \textbf{human-on-the-loop ML-theory research engi
 
 The central change is evidentiary. The NeurIPS technical report should not rest its system claim primarily on the Muon case study. Muon remains a realistic stress test showing intertwined theory-plus-empirical work and honest gap tracking, while the broader system argument must be supported by \textbf{existing benchmarks} routed through the relevant \pai{} subgraphs and by ablations that test whether the claimed system components matter.
 
+The benchmark unit is the \textbf{capability subgraph}, not an individual counseled node. For example, the experiment-execution claim should be tested by the full experiment subgraph---experiment literature, design, implementation, verification, and transcription---against a monolithic workflow baseline. Model counsel is a nested quality mechanism inside those agents, not the headline comparison.
+
 \textbf{Target artifacts.}
 \begin{itemize}
   \item \texttt{pAI\_Technical\_Report/Report\_Plans/pAI\_NeurIPS\_Benchmark\_Ablation\_Plan.tex}
@@ -77,7 +79,7 @@ C1 & Human-on-the-loop research control & Human gates at strategic checkpoints, 
 C2 & Claim-centric ML-theory state & Claim DAG with dependencies, status transitions, proof artifacts, empirical validation records, and acceptance rules. & Theory benchmark results plus ablation removing claim-state tracking; manuscript overclaim audit. \\
 C3 & Coupled theory/experiment execution & Separate theory and empirical-validation tracks with shared goals, cross-track dependencies, and merge validation. & Experiment and open-ended ML research benchmarks; ablation removing cross-track coupling. \\
 C4 & Typed gates and repair routing & Artifact gates, math acceptance validation, cross-track validation, paper traceability, review verdicts, and deterministic routing of failures. & Gate ablation; failure-mode accounting; repair count and artifact-validity rates. \\
-C5 & Councils as quality mechanisms & Sandboxed cross-model counsel plus persona councils covering rigor, novelty, practicality, narrative, and empirical grounding. & Council ablation on proposal, experiment, theory, and writeup tasks; judge and human-review deltas. \\
+C5 & Councils as nested quality mechanisms & Sandboxed cross-model counsel plus persona councils covering rigor, novelty, practicality, narrative, and empirical grounding inside capability subgraphs. & Council ablation within the same proposal, experiment, theory, and writeup subgraphs; judge and human-review deltas. \\
 C6 & Traceable manuscript production & Paper contracts, claim traceability, accepted-claims policy, reviewer feedback, copyedit and validation artifacts. & PaperBench/CORE-Bench/MLR-Bench results; traceability-contract ablation. \\
 C7 & Benchmark-routable modularity & Subgraphs can be isolated and evaluated on benchmarks for planning, proof/theory, experimentation, reproducibility, and writing. & Benchmark-to-subgraph matrix with official metrics and no new benchmark invention. \\
 \bottomrule
@@ -139,7 +141,9 @@ FunSearch & Domain system & Program-search discovery & Search over programs / sp
 
 \begin{enumerate}
   \item Use existing benchmark tasks, splits, inputs, and official metrics. Do not create new benchmark problems.
-  \item Route each benchmark through the narrowest \pai{} subgraph that corresponds to the benchmarked capability.
+  \item Route each benchmark through the narrowest \pai{} capability subgraph that corresponds to the benchmarked capability.
+  \item Treat the capability subgraph as the primary evaluation unit. A council ablation is an internal mechanism test, not the main baseline.
+  \item Compare each subgraph to a monolithic single-agent workflow with the same task input/output contract, tools, budget, and wall-clock envelope.
   \item Report official benchmark metrics first. Report \pai{} diagnostics only as secondary measurements.
   \item Do not aggregate unrelated benchmarks into a single headline number.
   \item Treat failed runs as data. Every failure must be classified as infrastructure failure, benchmark-adapter failure, or agent/system failure.
@@ -175,6 +179,16 @@ Paper replication & PaperBench or shorter official tier & Literature, resource p
 \normalsize
 \end{landscape}
 
+\section*{Two-Tier Comparison Design}
+
+The report should separate \textbf{external baselines} from \textbf{internal ablations}.
+
+\begin{itemize}
+  \item \textbf{External baseline:} a monolithic single-agent workflow receives the same benchmark task, tools, output contract, budget, and wall-clock envelope, but does not receive \pai{}'s staged subgraph roles, typed gates, repair routing, claim-state lifecycle, or traceability contract.
+  \item \textbf{Internal ablations:} the same \pai{} capability subgraph is run with one mechanism disabled. These ablations answer whether councils, typed gates, claim-state tracking, coupled tracks, traceability, or human steering matter \emph{given the subgraph architecture}.
+  \item \textbf{Derived aggregates:} best-of-three single-agent rows may be reported as oracle upper-bound summaries, but they are not runnable \pai{} conditions and should not be interpreted as model-council evaluations.
+\end{itemize}
+
 \section*{Ablation Plan}
 
 All ablations should be run on the same task set as Full \pai{} with matched model family, maximum tokens, wall-clock budget, tool access, and compute budget whenever possible. If an ablation disables a component that normally consumes model calls, the unused budget should be reallocated to the main agent so that quality differences are not explained merely by total test-time compute.
@@ -188,14 +202,14 @@ All ablations should be run on the same task set as Full \pai{} with matched mod
 \textbf{Condition} & \textbf{Disabled or Changed Mechanism} & \textbf{Primary Question} & \textbf{Priority} \\
 \midrule
 \endhead
-Full \pai{} & All typed gates, claim graph, councils, coupled tracks, reviewer routing, traceability, and human steering enabled. & Reference condition for all paired comparisons. & \core{} \\
+Full \pai{} Capability Subgraph & The relevant planning, theory, experiment, writing, or lifecycle subgraph runs with typed gates, claim graph, councils, coupled tracks, reviewer routing, traceability, and human steering enabled where applicable. & Reference condition for subgraph-level paired comparisons. & \core{} \\
 No Human Steering & Milestone gates use default autonomous continuation; human decisions are not injected. & Does strategic human steering improve final quality per compute dollar on hard tasks? & \core{} \\
-No Councils & Disable persona council and cross-model counsel; reallocate budget to main agent. & Do councils improve novelty, rigor, empirical grounding, and narrative quality? & \core{} \\
+No Councils & Disable persona council and cross-model counsel inside the same capability subgraph; reallocate budget to the main agent(s). & Do councils improve novelty, rigor, empirical grounding, and narrative quality once the subgraph architecture is held fixed? & \core{} \\
 No Typed Gates & Artifact validation and repair routing are disabled; stages pass artifacts forward. & Do gates reduce broken artifacts, unsupported claims, and late-stage failures? & \core{} \\
 No Claim-State Tracking & Replace claim DAG and status transitions with freeform notes. & Does claim-state tracking improve theorem calibration, proof-gap detection, and manuscript honesty? & \core{} \\
 No Coupled Tracks & Theory and experiment tracks run independently; no cross-track dependencies or merge validation. & Does coupling improve empirical-validation alignment and reduce theory/experiment contradictions? & \core{} \\
 No Traceability Contract & Paper contract and claim-traceability checks are disabled for writeup. & Does traceability reduce overclaiming and unsupported manuscript claims? & \core{} \\
-Single-Agent Baseline & One ReAct-style agent receives same tools and total budget but no specialized subgraphs. & Is \pai{}'s graph composition better than a strong single-agent scaffold? & \core{} \\
+Monolithic Single-Agent Workflow & One ReAct-style agent receives the same task, tools, output contract, and total budget but no specialized subgraph roles, typed gates, repair routing, or traceability contract. & Is \pai{}'s capability-subgraph composition better than a strong monolithic workflow? & \core{} \\
 No Empirical Validation Layer & Theory track produces proofs and writeup without numerical sanity checks or empirical-validation artifacts. & Does empirical validation catch theory mistakes or improve calibrated claims? & \tagstretch{} \\
 No Reviewer-Routed Repair & Reviewer feedback is collected but not routed to theory/experiment/writeup repair stages. & Does typed repair routing improve final artifact quality? & \tagstretch{} \\
 \bottomrule
