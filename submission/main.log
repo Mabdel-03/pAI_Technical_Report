@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.14)  24 APR 2026 03:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.14)  3 MAY 2026 03:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -484,164 +484,719 @@ Package microtype Info: Loading generic protrusion settings for font family
  [1
 
 
-{/orcd/home/002/mabdel03/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}]
-<figures/pai_system_graph.pdf, id=84, 794.97pt x 614.295pt>
-File: figures/pai_system_graph.pdf Graphic file (type pdf)
-<use figures/pai_system_graph.pdf>
-Package pdftex.def Info: figures/pai_system_graph.pdf  used on input line 60.
-(pdftex.def)             Requested size: 469.02936pt x 355.18773pt.
- [2 <./figures/pai_system_graph.pdf>] (/orcd/home/002/mabdel03/.TinyTeX/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+{/orcd/home/002/mabdel03/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}] (/orcd/home/002/mabdel03/.TinyTeX/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 77.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 58.
  (/orcd/home/002/mabdel03/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/orcd/home/002/mabdel03/.TinyTeX/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 77.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
  (/orcd/home/002/mabdel03/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/orcd/home/002/mabdel03/.TinyTeX/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-<figures/fig_theorem_a_validation.pdf, id=256, 953.96967pt x 293.48521pt>
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+[]|\T1/ptm/m/n/9 (+20) Architecture spec-i-fi-ca-tion and
+ []
+
+
+Underfull \hbox (badness 3514) in paragraph at lines 62--63
+\T1/ptm/m/n/9 (+20) implementation-maturity ledger;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
+[]|\T1/ptm/m/n/9 (+20) Coupled the-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+[]|\T1/ptm/m/n/9 (+20) Explicit unsupported-claim re-
+ []
+
+<figures/pai_system_graph.pdf, id=91, 794.97pt x 614.295pt>
+File: figures/pai_system_graph.pdf Graphic file (type pdf)
+<use figures/pai_system_graph.pdf>
+Package pdftex.def Info: figures/pai_system_graph.pdf  used on input line 80.
+(pdftex.def)             Requested size: 469.02936pt x 355.18773pt.
+[2] [3 <./figures/pai_system_graph.pdf>]
+<figures/fig_theorem_a_validation.pdf, id=287, 953.96967pt x 293.48521pt>
 File: figures/fig_theorem_a_validation.pdf Graphic file (type pdf)
 <use figures/fig_theorem_a_validation.pdf>
-Package pdftex.def Info: figures/fig_theorem_a_validation.pdf  used on input line 123.
+Package pdftex.def Info: figures/fig_theorem_a_validation.pdf  used on input line 143.
 (pdftex.def)             Requested size: 377.60951pt x 116.16945pt.
-<figures/fig_sign_criterion.pdf, id=259, 1002.43369pt x 286.09258pt>
+<figures/fig_sign_criterion.pdf, id=290, 1002.43369pt x 286.09258pt>
 File: figures/fig_sign_criterion.pdf Graphic file (type pdf)
 <use figures/fig_sign_criterion.pdf>
-Package pdftex.def Info: figures/fig_sign_criterion.pdf  used on input line 130.
+Package pdftex.def Info: figures/fig_sign_criterion.pdf  used on input line 150.
 (pdftex.def)             Requested size: 377.60951pt x 107.76901pt.
- [3] [4 <./figures/fig_theorem_a_validation.pdf> <./figures/fig_sign_criterion.pdf>]
-<figures/fig_theorem_b_bcrit.pdf, id=441, 929.22249pt x 292.63605pt>
+ [4 <./figures/fig_theorem_a_validation.pdf>]
+<figures/fig_theorem_b_bcrit.pdf, id=398, 929.22249pt x 292.63605pt>
 File: figures/fig_theorem_b_bcrit.pdf Graphic file (type pdf)
 <use figures/fig_theorem_b_bcrit.pdf>
-Package pdftex.def Info: figures/fig_theorem_b_bcrit.pdf  used on input line 169.
+Package pdftex.def Info: figures/fig_theorem_b_bcrit.pdf  used on input line 189.
 (pdftex.def)             Requested size: 377.60951pt x 118.91882pt.
-<figures/fig_atsr_phase_diagram.pdf, id=443, 776.08089pt x 316.4373pt>
+<figures/fig_atsr_phase_diagram.pdf, id=400, 776.08089pt x 316.4373pt>
 File: figures/fig_atsr_phase_diagram.pdf Graphic file (type pdf)
 <use figures/fig_atsr_phase_diagram.pdf>
-Package pdftex.def Info: figures/fig_atsr_phase_diagram.pdf  used on input line 179.
+Package pdftex.def Info: figures/fig_atsr_phase_diagram.pdf  used on input line 199.
 (pdftex.def)             Requested size: 377.60951pt x 153.96439pt.
- [5 <./figures/fig_theorem_b_bcrit.pdf> <./figures/fig_atsr_phase_diagram.pdf>]
-<figures/fig_h3_nanogpt.pdf, id=655, 783.59389pt x 337.58057pt>
+ [5 <./figures/fig_sign_criterion.pdf>]
+<figures/fig_h3_nanogpt.pdf, id=463, 783.59389pt x 337.58057pt>
 File: figures/fig_h3_nanogpt.pdf Graphic file (type pdf)
 <use figures/fig_h3_nanogpt.pdf>
-Package pdftex.def Info: figures/fig_h3_nanogpt.pdf  used on input line 195.
+Package pdftex.def Info: figures/fig_h3_nanogpt.pdf  used on input line 215.
 (pdftex.def)             Requested size: 377.60951pt x 162.6807pt.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 206.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 226.
  (/orcd/home/002/mabdel03/.TinyTeX/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
-Underfull \hbox (badness 1655) in paragraph at lines 232--233
-[]|\T1/ptm/m/n/9 (+20) Would re-quire new API/HPC cam-paign
+) [6 <./figures/fig_theorem_b_bcrit.pdf> <./figures/fig_atsr_phase_diagram.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 257--257
+[]|\T1/ptm/m/n/7 (+20) 1 pre-served
  []
 
-[6 <./figures/fig_h3_nanogpt.pdf>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 257--257
+[]|\T1/ptm/m/n/7 (+20) End-to-end research-to-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 257--258
+[]|\T1/ptm/m/n/7 (+20) Case study, not
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--258
+[]|\T1/ptm/m/n/7 (+20) 20 matched
+ []
+
+
+Underfull \hbox (badness 1735) in paragraph at lines 258--258
+[]|\T1/ptm/m/n/7 (+20) GPT-5.5 7.500; Opus
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--258
+[]|\T1/ptm/m/n/7 (+20) Cleanest pos-i-tive
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--258
+\T1/ptm/m/n/7 (+20) planning-subgraph
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
+[]|\T1/ptm/m/n/7 (+20) Internal ab-la-tions
+ []
+
+
+Underfull \hbox (badness 1735) in paragraph at lines 259--259
+[]|\T1/ptm/m/n/7 (+20) Opus 0.832; GPT-5.5
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 259--259
+[]|\T1/ptm/m/n/7 (+20) Competitive theory-QA
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
+[]|\T1/ptm/m/n/7 (+20) Not best single-
+ []
+
+
+Underfull \hbox (badness 2608) in paragraph at lines 260--260
+[]|\T1/ptm/m/n/7 (+20) 186 tasks per
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
+[]|\T1/ptm/m/n/7 (+20) Theory/formalization
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
+\T1/ptm/m/n/7 (+20) sub-graph: Lean4
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
+[]|\T1/ptm/m/n/7 (+20) Opus Lean4 0.167;
+ []
+
+
+Underfull \hbox (badness 5374) in paragraph at lines 260--260
+[]|\T1/ptm/m/n/7 (+20) Useful theory-subgraph
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--261
+\T1/ptm/m/n/7 (+20) ver-sus strongest
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--261
+[]|\T1/ptm/m/n/7 (+20) Local ex-per-i-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--261
+[]|\T1/ptm/m/n/7 (+20) Experiment sub-graph:
+ []
+
+
+Underfull \hbox (badness 3460) in paragraph at lines 261--262
+[]|\T1/ptm/m/n/7 (+20) Adapter readi-ness,
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 262--262
-[]|\T1/pcr/m/n/9 theory_sections.tex\T1/ptm/m/n/9 (+20) ;
+[]|\T1/ptm/m/n/7 (+20) 19/19 task-discovery-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
-[]|\T1/pcr/m/n/9 GPT54_CYCLE3
+Underfull \hbox (badness 1715) in paragraph at lines 262--263
+[]|\T1/ptm/m/n/7 (+20) Docker/cloud, cre-
+ []
+
+[7 <./figures/fig_h3_nanogpt.pdf>]
+Underfull \hbox (badness 1199) in paragraph at lines 283--284
+\T1/ptm/m/n/9 (+20) would re-quire fresh API calls and raw-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
-\T1/ptm/m/n/9 (+20) proof ar-ti-facts;
+Underfull \hbox (badness 2635) in paragraph at lines 285--286
+\T1/ptm/m/n/9 (+20) the May 6 local-only slices added 24
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 326--327
+[]|\T1/ptm/m/n/9 (+20) Complete planning-
  []
 
 
-Overfull \hbox (3.53189pt too wide) in paragraph at lines 263--263
-\T1/pcr/m/n/9 fig_sign_criterion.pdf| 
+Underfull \hbox (badness 4582) in paragraph at lines 328--329
+[]|\T1/ptm/m/n/9 (+20) Complete scored slices,
  []
 
 
-Overfull \hbox (43.03673pt too wide) in paragraph at lines 264--264
-[]|\T1/pcr/m/n/9 experiment_track_summary.json\T1/ptm/m/n/9 (-20) ;
+Underfull \hbox (badness 10000) in paragraph at lines 328--329
+\T1/ptm/m/n/9 (+20) with pAI close on
  []
 
 
-Overfull \hbox (35.93185pt too wide) in paragraph at lines 264--264
-\T1/pcr/m/n/9 fig_theorem_a_validation.pdf| 
+Underfull \hbox (badness 10000) in paragraph at lines 328--329
+\T1/ptm/m/n/9 (+20) Lean4 pass@1 but
  []
 
 
-Overfull \hbox (21.43675pt too wide) in paragraph at lines 265--265
-[]|\T1/pcr/m/n/9 theory_track_summary.json\T1/ptm/m/n/9 (-20) ;
+Underfull \hbox (badness 4291) in paragraph at lines 328--329
+\T1/ptm/m/n/9 (+20) trail-ing the best sin-gle
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--265
-\T1/pcr/m/n/9 v5_results.tex\T1/ptm/m/n/9 (+20) ;
+Underfull \hbox (badness 1221) in paragraph at lines 328--329
+\T1/ptm/m/n/9 (+20) model on aut-o-for-mal-iza-
  []
 
 
-Overfull \hbox (8.93188pt too wide) in paragraph at lines 265--265
-\T1/pcr/m/n/9 fig_theorem_b_bcrit.pdf| 
+Underfull \hbox (badness 10000) in paragraph at lines 329--329
+[]|\T1/ptm/m/n/9 (+20) 18 com-pleted of-fi-cial; 6
  []
 
 
-Underfull \hbox (badness 4492) in paragraph at lines 265--266
-[]|\T1/ptm/m/n/9 (+20) Evidence-scoped the-o-rem with
+Underfull \hbox (badness 3568) in paragraph at lines 329--330
+[]|\T1/ptm/m/n/9 (+20) Small lo-cal experiment-
  []
 
 
-Overfull \hbox (43.03673pt too wide) in paragraph at lines 266--266
-[]|\T1/pcr/m/n/9 experiment_track_summary.json\T1/ptm/m/n/9 (-20) ;
+Underfull \hbox (badness 2707) in paragraph at lines 329--330
+\T1/ptm/m/n/9 (+20) subgraph slice; May 6
  []
 
 
-Overfull \hbox (25.13187pt too wide) in paragraph at lines 266--266
-\T1/pcr/m/n/9 fig_atsr_phase_diagram.pdf| 
+Underfull \hbox (badness 10000) in paragraph at lines 330--330
+[]|\T1/ptm/m/n/9 (+20) 4 com-pleted of-fi-cial; 12
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--267
-[]|\T1/pcr/m/n/9 v5_transformer.tex\T1/ptm/m/n/9 (+20) ;
+Underfull \hbox (badness 10000) in paragraph at lines 330--330
+\T1/pcr/m/n/9 blocked_adapter\T1/ptm/m/n/9 (+20) ; 17
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 331--331
+[]|\T1/ptm/m/n/9 (+20) 3 com-pleted of-fi-cial; 6
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 331--331
+\T1/pcr/m/n/9 blocked_adapter\T1/ptm/m/n/9 (+20) ; 6
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 331--331
+\T1/pcr/m/n/9 blocked_environment\T1/ptm/m/n/9 (+20) ;
+ []
+
+
+Underfull \hbox (badness 3333) in paragraph at lines 331--332
+[]|\T1/ptm/m/n/9 (+20) Pilot-scale only; not a
+ []
+
+
+Underfull \hbox (badness 1275) in paragraph at lines 332--332
+[]|\T1/ptm/m/n/9 (+20) AIRS: 4 blocked; MLRC: 1
+ []
+
+
+Underfull \hbox (badness 5681) in paragraph at lines 333--333
+\T1/ptm/m/n/9 (+20) and formal-proof gated
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--334
+[]|\T1/ptm/m/n/9 (+20) Planned or blocked:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--334
+\T1/ptm/m/n/9 (+20) CORE-Bench, MLE-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--334
+\T1/ptm/m/n/9 (+20) Bench, DeepResearch-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--334
+\T1/ptm/m/n/9 (+20) Bench, Le-an-Dojo,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--334
+\T1/ptm/m/n/9 (+20) miniF2F, Put-nam-Bench,
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--285
+Underfull \hbox (badness 10000) in paragraph at lines 348--349
+[]|\T1/ptm/m/n/9 (+20) Internal ab-la-tions are
+ []
+
+
+Underfull \hbox (badness 1158) in paragraph at lines 349--350
+[]|\T1/ptm/m/n/9 (+20) The routed the-ory sub-
+ []
+
+
+Underfull \hbox (badness 1354) in paragraph at lines 349--350
+\T1/ptm/m/n/9 (+20) not best among single-
+ []
+
+
+Underfull \hbox (badness 1253) in paragraph at lines 350--350
+\T1/ptm/m/n/9 (+20) BLEU and 0.914 type-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--351
+[]|\T1/ptm/m/n/9 (+20) ProofNet in-for-mal-iza-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--351
+[]|\T1/ptm/m/n/9 (+20) Informalization BLEU
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--351
+\T1/ptm/m/n/9 (+20) 0.052; Lean4 pass@1
+ []
+
+
+Underfull \hbox (badness 3049) in paragraph at lines 351--351
+[]|\T1/ptm/m/n/9 (+20) Lean4 pass@1: Opus
+ []
+
+
+Underfull \hbox (badness 4872) in paragraph at lines 351--351
+\T1/ptm/m/n/9 (+20) 0.167, GPT-5.5 0.134,
+ []
+
+
+Underfull \hbox (badness 7256) in paragraph at lines 352--352
+[]|\T1/ptm/m/n/9 (+20) ML-Dev suc-cess 0.857
+ []
+
+
+Underfull \hbox (badness 1152) in paragraph at lines 352--352
+[]|\T1/ptm/m/n/9 (+20) ML-Dev GPT-5.5 base-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 352--353
+\T1/ptm/m/n/9 (+20) infrastructure-sensitive
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--367
+[]|$\OT1/cmr/m/n/9 +0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 200$ \T1/ptm/m/n/9 (+20) [$\OMS/cmsy/m/n/9 ^^@\OT1/cmr/m/n/9 0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 025$\T1/ptm/m/n/9 (+20) ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 367--368
+[]|$\OT1/cmr/m/n/9 +0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 425$ \T1/ptm/m/n/9 (+20) [$\OT1/cmr/m/n/9 +0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 225$\T1/ptm/m/n/9 (+20) ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 368--369
+[]|$\OT1/cmr/m/n/9 +0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 875$ \T1/ptm/m/n/9 (+20) [$\OT1/cmr/m/n/9 +0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 650$\T1/ptm/m/n/9 (+20) ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
+[]|$\OMS/cmsy/m/n/9 ^^@\OT1/cmr/m/n/9 0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 011$ \T1/ptm/m/n/9 (+20) [$\OMS/cmsy/m/n/9 ^^@\OT1/cmr/m/n/9 0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 063$\T1/ptm/m/n/9 (+20) ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 370--371
+[]|$\OMS/cmsy/m/n/9 ^^@\OT1/cmr/m/n/9 0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 021$ \T1/ptm/m/n/9 (+20) [$\OMS/cmsy/m/n/9 ^^@\OT1/cmr/m/n/9 0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 084$\T1/ptm/m/n/9 (+20) ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--372
+[]|$\OT1/cmr/m/n/9 +0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 074$ \T1/ptm/m/n/9 (+20) [$\OT1/cmr/m/n/9 +0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 000$\T1/ptm/m/n/9 (+20) ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--373
+[]|$\OMS/cmsy/m/n/9 ^^@\OT1/cmr/m/n/9 0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 384$ \T1/ptm/m/n/9 (+20) [$\OMS/cmsy/m/n/9 ^^@\OT1/cmr/m/n/9 0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 426$\T1/ptm/m/n/9 (+20) ,
+ []
+
+
+Underfull \hbox (badness 1783) in paragraph at lines 373--373
+[]|\T1/ptm/m/n/9 (+20) ProofNet Lean3 state-ment
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 373--374
+[]|$\OMS/cmsy/m/n/9 ^^@\OT1/cmr/m/n/9 0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 387$ \T1/ptm/m/n/9 (+20) [$\OMS/cmsy/m/n/9 ^^@\OT1/cmr/m/n/9 0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 457$\T1/ptm/m/n/9 (+20) ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
+[]|\T1/ptm/m/n/9 (+20) ProofNet in-for-mal-iza-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--375
+[]|$\OMS/cmsy/m/n/9 ^^@\OT1/cmr/m/n/9 0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 082$ \T1/ptm/m/n/9 (+20) [$\OMS/cmsy/m/n/9 ^^@\OT1/cmr/m/n/9 0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 097$\T1/ptm/m/n/9 (+20) ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--376
+[]|$\OMS/cmsy/m/n/9 ^^@\OT1/cmr/m/n/9 0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 075$ \T1/ptm/m/n/9 (+20) [$\OMS/cmsy/m/n/9 ^^@\OT1/cmr/m/n/9 0\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 118$\T1/ptm/m/n/9 (+20) ,
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--389
+[]|\T1/ptm/m/n/9 (+20) Container/cloud equiv-a-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--389
+[]|\T1/ptm/m/n/9 (+20) CORE-Bench, Pa-per-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--389
+\T1/ptm/m/n/9 (+20) Bench, SWE-Bench,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--390
+[]|\T1/ptm/m/n/9 (+20) MLE-Bench,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--390
+\T1/ptm/m/n/9 (+20) DeepResearch-Bench,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--390
+\T1/ptm/m/n/9 (+20) some MLA-gent-Bench
+ []
+
+
+Underfull \hbox (badness 5696) in paragraph at lines 391--391
+[]|\T1/ptm/m/n/9 (+20) Local App-tainer adapter
+ []
+
+
+Underfull \hbox (badness 1681) in paragraph at lines 391--392
+[]|\T1/ptm/m/n/9 (+20) The May 6 local-only slices pro-duced 24
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 392--392
+[]|\T1/ptm/m/n/9 (+20) LeanDojo, miniF2F,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 392--392
+\T1/ptm/m/n/9 (+20) Put-nam-Bench, generic
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 2922) in paragraph at lines 407--408
+[]|\T1/ptm/m/n/9 (+20) State human-on-the-loop de-sign,
+ []
+
+
+Underfull \hbox (badness 3547) in paragraph at lines 409--409
+[]|\T1/ptm/m/n/9 (+20) Preserved ar-ti-facts lack fresh
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--409
+\T1/ptm/m/n/9 (+20) Muon base-lines and live
+ []
+
+
+Underfull \hbox (badness 2096) in paragraph at lines 410--410
+[]|\T1/ptm/m/n/9 (+20) All 24 se-lected cells be-came
+ []
+
+
+Underfull \hbox (badness 1292) in paragraph at lines 410--410
+\T1/pcr/m/n/9 blocked_adapter\T1/ptm/m/n/9 (+20) ; no of-fi-
+ []
+
+
+Underfull \hbox (badness 1701) in paragraph at lines 410--411
+[]|\T1/ptm/m/n/9 (+20) Report them only as execution-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 411--411
+[]|\T1/ptm/m/n/9 (+20) Ledger rows re-port of-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 411--411
+\T1/ptm/m/n/9 (+20) fi-cial scores only when
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--412
+\T1/ptm/m/n/9 (+20) com-po-nents be-low verified-
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 428--428
+[]|$\T1/pcr/m/n/9 theory _ sections . tex$\T1/ptm/m/n/9 (+20) ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 429--429
+[]|$\T1/pcr/m/n/9 GPT54 _ CYCLE3$ \T1/ptm/m/n/9 (+20) proof
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 429--429
+\T1/ptm/m/n/9 (+20) ar-ti-facts; $\T1/pcr/m/n/9 fig _ sign _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 430--430
+[]|$\T1/pcr/m/n/9 experiment _ track _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 430--430
+\T1/pcr/m/n/9 summary . json$\T1/ptm/m/n/9 (+20) ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 430--430
+\T1/pcr/m/n/9 fig _ theorem _ a _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 431--431
+[]|$\T1/pcr/m/n/9 theory _ track _ summary .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 431--431
+\T1/pcr/m/n/9 json$\T1/ptm/m/n/9 (+20) ; $\T1/pcr/m/n/9 v5 _ results . tex$\T1/ptm/m/n/9 (+20) ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 431--431
+\T1/pcr/m/n/9 fig _ theorem _ b _ bcrit .
+ []
+
+
+Underfull \hbox (badness 4492) in paragraph at lines 431--432
+[]|\T1/ptm/m/n/9 (+20) Evidence-scoped the-o-rem with
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 432--432
+[]|$\T1/pcr/m/n/9 experiment _ track _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 432--432
+\T1/pcr/m/n/9 summary . json$\T1/ptm/m/n/9 (+20) ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 432--432
+\T1/pcr/m/n/9 fig _ atsr _ phase _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 433--433
+[]|$\T1/pcr/m/n/9 v5 _ transformer . tex$\T1/ptm/m/n/9 (+20) ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 435--435
+[]|\T1/ptm/m/n/9 (+20) May 6 bench-mark mas-ter
+ []
+
+
+Underfull \hbox (badness 1688) in paragraph at lines 435--435
+\T1/ptm/m/n/9 (+20) bun-dle; $\T1/pcr/m/n/9 official _ score _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 436--436
+[]|\T1/ptm/m/n/9 (+20) May 6 bench-mark mas-ter
+ []
+
+
+Underfull \hbox (badness 1688) in paragraph at lines 436--436
+\T1/ptm/m/n/9 (+20) bun-dle; $\T1/pcr/m/n/9 compact _ result _
+ []
+
+
+Underfull \hbox (badness 4556) in paragraph at lines 436--437
+[]|\T1/ptm/m/n/9 (+20) TheoremQA and ProofNet re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 437--437
+[]|$\T1/pcr/m/n/9 pai _ neurips _ may6 _ ml _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 437--437
+\T1/pcr/m/n/9 dev _ calipers$\T1/ptm/m/n/9 (+20) ; $\T1/pcr/m/n/9 pai _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 437--437
+\T1/pcr/m/n/9 neurips _ may6 _ mlgym _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 437--437
+\T1/pcr/m/n/9 pilot$\T1/ptm/m/n/9 (+20) ; $\T1/pcr/m/n/9 pai _ neurips _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 437--438
+[]|\T1/ptm/m/n/9 (+20) No new of-fi-cial scores; 24
+ []
+
+
+Underfull \hbox (badness 3557) in paragraph at lines 437--438
+\T1/pcr/m/n/9 blocked_adapter \T1/ptm/m/n/9 (+20) rows are
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 438--439
+[]|\T1/ptm/m/n/9 (+20) Reported with official-score,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
+\T1/pcr/m/n/9 HumanSteeringEvent \T1/ptm/m/n/9 (+20) log-
+ []
+
+[9]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 456--456
 []|\T1/ptm/m/n/9 (+20) Theory/experiment ex-
  []
 
 
-Underfull \hbox (badness 2351) in paragraph at lines 287--287
+Underfull \hbox (badness 7291) in paragraph at lines 457--458
+[]|\T1/ptm/m/n/9 (+20) May 6 ML-Dev, ML-Gym, and MLA-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--458
+\T1/ptm/m/n/9 (+20) gent-Bench ex-ten-sions failed closed as
+ []
+
+
+Underfull \hbox (badness 2351) in paragraph at lines 460--460
 []|\T1/ptm/m/n/9 (+20) Not claimed as demon-
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[7] (./main.bbl [8]) [9] (./main.aux)
+(./main.bbl [10] [11]) [12] [13] [14] [15] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D9B063299319A55E9C9E96A6BDD11AFB;2499.
+(rerunfilecheck)             Checksum: 33E9D85ABA407D6CA83410C90BFAB052;2926.
  ) 
 Here is how much of TeX's memory you used:
- 14275 strings out of 469515
- 222218 string characters out of 5469773
- 683592 words of memory out of 5000000
- 42476 multiletter control sequences out of 15000+600000
- 666888 words of font info for 208 fonts, out of 8000000 for 9000
+ 14436 strings out of 469515
+ 223797 string characters out of 5469773
+ 713149 words of memory out of 5000000
+ 42492 multiletter control sequences out of 15000+600000
+ 677695 words of font info for 292 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,10n,79p,1251b,617s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (9 pages, 633885 bytes).
+ 75i,11n,79p,1820b,619s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></orcd/home/002/mabdel03/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (15 pages, 681345 bytes).
 PDF statistics:
- 873 PDF objects out of 1000 (max. 8388607)
- 318 compressed objects within 4 object streams
- 60 named destinations out of 1000 (max. 500000)
- 40605 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 946 PDF objects out of 1000 (max. 8388607)
+ 378 compressed objects within 4 object streams
+ 80 named destinations out of 1000 (max. 500000)
+ 48813 words of extra memory for PDF output out of 51595 (max. 10000000)
 

@@ -41,15 +41,35 @@
 \maketitle
 
 \begin{abstract}
-We present pAI, a human-on-the-loop multi-agent pipeline for machine-learning theory projects that couples typed artifacts, claim-level search, cross-family adversarial review, and concurrent theory/experiment tracks. This evidence-locked technical report is an anonymous submission build produced from preserved artifacts of one end-to-end Muon implicit-bias campaign. The report deliberately distinguishes implemented system capability from what the preserved campaign actually exercised: the Muon evidence supports theorem repair, figure-backed empirical claims, cost accounting, and a reconstructed self-correction episode, but does not support fresh single-prompt baseline results, new ablation runs, or claims that live milestone blocking was demonstrated in this run. As a case study, pAI produced a corrected structural characterization of Muon's singular-value dynamics in under-determined matrix regression, a critical-batch-size formula with verified isotropic components and explicit heuristic caveats, and cautious transformer-layer evidence from NanoGPT-124M. The final artifact compiles without manuscript placeholders and includes an evidence ledger so that each major claim is tied to a preserved source.
+We present pAI, a human-on-the-loop research control plane for machine-learning theory projects that couples typed artifacts, claim-state search, cross-model council review, theory/experiment tracks, and traceable manuscript production. This evidence-scoped technical report combines preserved artifacts from one Muon implicit-bias campaign with an official-score audit of the current pAI benchmark harness. The May 6 benchmark master bundle records 2,755 completed official cells from a 4,241-cell expanded matrix at \$36.247208 recorded model cost, with 34 blocked and 91 queued records and all 19 benchmark families available for local task discovery. Its clearest positive result is MLR-Bench planning: the pAI planning subgraph obtains mean score 7.700 over 20 tasks, compared with 7.500 for GPT-5.5, 7.275 for Opus 4.7, and 6.825 for Gemini 3.1. Theory benchmarks are mixed rather than uniformly favorable: pAI theory subgraphs are competitive on TheoremQA and Lean4 ProofNet pass@1, but trail the strongest single-model baselines on TheoremQA, ProofNet autoformalization, and ProofNet informalization. The Muon case study provides complementary evidence for theorem repair, figure-backed empirical claims, cost accounting, and conservative claim ledgers: pAI produced a corrected characterization of Muon's singular-value dynamics in under-determined matrix regression, an evidence-scoped critical-batch-size formula, and cautious transformer-layer evidence. We do not claim full autonomy, universal benchmark superiority, measured compression of human steering, or live milestone blocking in the preserved Muon run; instead, we show that an auditable human-on-the-loop pipeline can produce rigorous, evidence-traceable ML-theory research artifacts while exposing its remaining gaps.
 \end{abstract}
 
 \section{Introduction}
-Large language models are now useful assistants for machine-learning theory, but ad hoc use leaves the researcher responsible for state management, proof checking, experiment design, and citation hygiene. Fully autonomous AI-scientist systems move in the opposite direction by attempting to remove human steering from the research loop \citep{lu2024aiscientist,yamada2025aiscientistv2,jiang2025aide,gottweis2025coscientist}. pAI targets a more conservative point: reduce the number of human steering decisions while preserving human responsibility for novelty, proof correctness, and publication judgement.
+Large language models are now useful assistants for machine-learning theory, but ad hoc use leaves the researcher responsible for state management, proof checking, experiment design, and citation hygiene. Fully autonomous AI-scientist systems move in the opposite direction by attempting to remove human steering from the research loop \citep{lu2024aiscientist,yamada2025aiscientistv2,jiang2025aide,gottweis2025coscientist}. pAI targets a more conservative point: make high-level human steering auditable and sparse while preserving human responsibility for novelty, proof correctness, and publication judgement.
 
 Machine-learning theory is a difficult regime for automation because claims are usually natural-language mathematical arguments coupled to numerical predictions. Unlike theorem-proving benchmarks and some pure-math systems \citep{trinh2024alphageometry,romerapadres2024funsearch}, the relevant objects here include matrix flows, spectral dynamics, optimizer geometry, and training-run validation. The pAI design therefore treats research as an artifact pipeline rather than a single chat transcript.
 
-This report has two purposes. First, it specifies pAI's architecture at the level of gates, artifacts, and failure modes. Second, it audits one preserved Muon campaign as an evidence-backed demonstration. The central discipline in this revision is truthfulness: we use the locked Muon rigorous artifact bundle at commit \texttt{03b2339} as evidence, and unsupported items from the recovery plan are explicitly flagged as remaining work rather than converted into claims.
+This report has three purposes. First, it specifies pAI's architecture at the level of gates, artifacts, and failure modes. Second, it audits one preserved Muon campaign as an evidence-backed stress test. Third, it reports official-score benchmark evidence using the pAI benchmark master bundle rather than treating the system as Muon-only evidence. The central discipline in this revision is truthfulness: we use the locked Muon rigorous artifact bundle at commit \texttt{03b2339} and the benchmark ledger bundle as evidence, and unsupported items from the recovery plan are explicitly flagged as remaining work rather than converted into claims.
+
+\paragraph{Evidence-scoped contributions.}
+The report makes five claims, all intentionally narrower than full autonomous discovery:
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.23\linewidth}p{0.36\linewidth}p{0.31\linewidth}@{}}
+\toprule
+\textbf{Contribution} & \textbf{Mechanism} & \textbf{Evidence in this report} \\
+\midrule
+Human-on-the-loop control plane & Typed stages, gates, councils, repair routing, and manuscript traceability. & Architecture specification and implementation-maturity ledger; no measured steering-compression claim. \\
+Claim-centric ML-theory state & Claim-DAG statuses, falsification criteria, and evidence ledgers. & Muon theorem repair and claim-evidence table. \\
+Coupled theory/experiment workflow & Separate theory and empirical tracks sharing claim state. & Muon figures and conservative theorem caveats. \\
+Benchmark-routable subgraphs & Planning, theory, experiment, and lifecycle adapters with official-score rows. & 2,755 completed official cells and paired benchmark deltas. \\
+Truthful manuscript production & Paper claims tied to preserved evidence and blocked-work tables. & Explicit unsupported-claim removals and remaining-work table. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{What this report does not claim.}
+This submission does not claim full autonomy, publication-quality science without expert judgement, broad dominance over frontier single-model baselines, a measured reduction in human steering, or live milestone blocking in the preserved Muon run. Those follow-up evaluations require structured human-decision logs and paired autonomous-continuation ablations; they are not conclusions supported by the current evidence bundle.
 
 \section{System Architecture}
 \label{sec:architecture}
@@ -69,7 +89,7 @@ The core research object is a directed acyclic graph whose nodes are conjectures
 At scientific gates, pAI can convene a cross-family council. The locked Muon metadata records a council with Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro Preview, and Claude Sonnet 4.6, with debate and synthesis enabled. The current report claims that this was configured and used as part of the evidence base; it does not claim that every potential gate had live milestone enforcement.
 
 \paragraph{Dual-track execution.}
-The theory track develops claims and proofs, while the experiment track designs and verifies empirical tests. The preserved experiment summary contains four experiment groups: nuclear-norm falsification, critical-batch-size verification, ATSR/weight-decay phase mapping, and NanoGPT spectral profiling. Three are marked pass and one is partial. This is enough for a credible case study, but not enough for a fresh component-ablation study.
+The theory track develops claims and proofs, while the experiment track designs and verifies empirical tests. The preserved experiment summary contains four Muon experiment groups: nuclear-norm falsification, critical-batch-size verification, ATSR/weight-decay phase mapping, and NanoGPT spectral profiling. Three are marked pass and one is partial. This is enough for a credible case study, while the broader external-benchmark evidence is reported separately in Section~\ref{sec:benchmark_progress}.
 
 \section{Muon Case Study}
 \label{sec:muon}
@@ -115,7 +135,7 @@ Then:
 \end{theorem}
 
 \begin{remark}
-Theorem~\ref{thm:spectral} is the key truthfulness repair. An earlier draft claimed Frobenius conservation. The locked proof artifacts show contraction, not conservation. The unnormalized $\Rpw$ is also not a Lyapunov function for the tangential flow; the report therefore tracks the normalized sign criterion.
+Theorem~\ref{thm:spectral} is the key truthfulness repair. An earlier draft claimed a constant Frobenius norm. The locked proof artifacts show contraction. The unnormalized $\Rpw$ is also not a Lyapunov function for the tangential flow; the report therefore tracks the normalized sign criterion.
 \end{remark}
 
 \begin{figure}[t]
@@ -203,7 +223,7 @@ The recovery audit identified a Lyapunov/sign-error episode as central to the pA
 
 The reconstructed correction is:
 \begin{itemize}[leftmargin=1.6em,itemsep=0.2em]
-  \item The original draft conflated Frobenius conservation with contraction.
+  \item The original draft conflated constant Frobenius radius with contraction.
   \item The corrected proof shows $\frac{d}{dt}\fro{W(t)}^2=-2\eta\sum_i\alpha_i\sigma_i\le0$.
   \item The corrected normalized shape derivative is Equation~\eqref{eq:Rtilde_main}.
   \item The unnormalized pairwise functional increases along the raw tangential flow, so it cannot be used as the Lyapunov function claimed by stale summaries.
@@ -215,9 +235,41 @@ For clarity, Equation~\eqref{eq:Rtilde_main} restates the report's actionable cr
   =\frac{2\eta}{\rho(t)}\sum_i\alpha_i(t)(S_i-C\widetilde\sigma_i(t)).
 \end{equation}
 
+\section{External Benchmark Progress}
+\label{sec:benchmark_progress}
+The current benchmark evidence source is the May 6 master bundle. It is a ledgered benchmark-orchestration bundle, not a smoke-only artifact: result rows are reported as official only when the harness records \texttt{official\_score=true}. The bundle records 4,241 planned cells, 2,755 completed official cells, 34 blocked records, 91 queued records, no budget-deferred cells, and actual recorded cost of \$36.247208. Its merge manifest drops one stale non-current MLGym row and records 1,361 missing planned cells by family.
+
+The May 6 local-only extension attempted three Apptainer slices: ML-Dev local calipers, an MLGym pilot, and a paired three-task MLAgentBench slice. All 24 selected cells failed closed as \texttt{blocked\_adapter} records: 6 ML-Dev, 6 MLGym, and 12 MLAgentBench. These runs add execution-readiness evidence and blocker rows, not new scientific scores or new model cost.
+
+\paragraph{Capability-routed interpretation.}
+pAI is modular: planning, theory, experiment, lifecycle, and writing/reproducibility benchmarks activate different capability subgraphs rather than the entire research-to-manuscript system. The report-facing benchmark interpretation is therefore a routed-subgraph one. MLR-Bench tests the planning and research-proposal subgraph; TheoremQA and ProofNet test theory-reasoning, formalization, and proof-review subgraphs; ML-Dev-Bench, MLAgentBench, and MLGym test experiment-execution subgraphs; and the Muon case study is the only evidence here for end-to-end research-to-manuscript orchestration. Shared infrastructure such as typed artifacts, councils, claim state, traceability, and repair routing is included when relevant, but irrelevant pAI components are not interpreted as being tested by a benchmark that does not exercise them.
+
+\begin{table}[t]
+\centering
+\caption{Main-text evidence summary. Detailed coverage, score, paired-delta, and blocker tables are in Appendix~\ref{app:benchmark_details}.}
+\label{tab:evidence_summary}
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}p{0.16\linewidth}p{0.11\linewidth}p{0.17\linewidth}p{0.17\linewidth}p{0.18\linewidth}p{0.14\linewidth}@{}}
+\toprule
+\textbf{Evidence source} & \textbf{N/status} & \textbf{pAI routed result} & \textbf{Strongest comparator} & \textbf{Interpretation} & \textbf{Caveat} \\
+\midrule
+Muon campaign & 1 preserved campaign & Corrected spectral theorem, figures, cost ledger, claim statuses. & No fresh Muon baseline in locked artifacts. & End-to-end research-to-manuscript stress test. & Case study, not system-wide proof. \\
+MLR-Bench planning & 20 matched tasks & Planning subgraph mean 7.700. & GPT-5.5 7.500; Opus 7.275; Gemini 6.825. & Cleanest positive planning-subgraph signal. & Internal ablations are 5-task slices. \\
+TheoremQA & 95 matched text tasks & Theory subgraph exact accuracy 0.811. & Opus 0.832; GPT-5.5 0.821. & Competitive theory-QA subgraph evidence. & Not best single-model result. \\
+ProofNet scored tracks & 186 tasks per track & Theory/formalization subgraph: Lean4 pass@1 0.161; autoformalization BLEU 0.259. & Opus Lean4 0.167; Opus autoformalization BLEU 0.626. & Useful theory-subgraph coverage. & Mixed or negative versus strongest baseline. \\
+Local experiment/lifecycle pilots & 25 prior official cells; 24 May 6 blocked cells & Experiment subgraph: ML-Dev success 0.857 over 7 pAI cells; no new May 6 scores. & ML-Dev GPT-5.5 success 0.833 over 6 cells. & Pilot-scale only; May 6 added blocker evidence. & Adapter readiness, not family-level performance. \\
+Blocked/queued families & 34 blocked; 91 queued & 19/19 task-discovery-ready families. & N/A & Infrastructure status is explicit in the ledger. & Docker/cloud, credential, and formal-proof gaps remain. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Reviewer objections and evidence.}
+A reviewer can reasonably object that the theory benchmarks do not show broad dominance, that experiment/lifecycle evidence remains small, that the paper has no measured human-steering-compression ledger, and that several Docker/cloud, credentialed, and formal-proof families remain blocked. The report makes those objections visible rather than smoothing them away: MLR-Bench is the only broad positive routed-subgraph slice, TheoremQA and ProofNet are reported as mixed theory-subgraph evidence, the May 6 local slices are recorded as \texttt{blocked\_adapter} rather than as scores, and steering compression is deferred until structured human-decision logs and paired \texttt{no\_human\_steering} ablations exist.
+
 \section{Evaluation Scope and Remaining Work}
 \label{sec:evaluation}
-This submission build is evidence-only. It does not run fresh model APIs, submit new jobs, or infer missing measurements. Table~\ref{tab:remaining} records the evaluation items that the previous recovery plan requested but that are not actioned in this pass.
+This submission build is evidence-scoped. It reports fresh benchmark evidence only where the benchmark ledger records official-score rows, and it does not infer missing measurements from queued, blocked, or non-official pilot rows. Table~\ref{tab:remaining} records evaluation items that remain incomplete or deliberately outside the current evidence bundle.
 
 \begin{table}[h]
 \centering
@@ -228,26 +280,139 @@ This submission build is evidence-only. It does not run fresh model APIs, submit
 \toprule
 \textbf{Item} & \textbf{Status} & \textbf{Reason} \\
 \midrule
-Single-prompt baseline Table 3 & Deferred & Would require fresh API calls and raw-response archiving. \\
-Six-run ablation study & Deferred & Would require new API/HPC campaign launches and cannot be represented as existing evidence. \\
+Muon single-prompt baseline Table 3 & Deferred & Not present in the locked Muon artifacts; would require fresh API calls and raw-response archiving. \\
+Muon six-run ablation study & Deferred & Not present in the locked Muon artifacts; would require a new API/HPC campaign. \\
+External benchmark official cells & Partial & 2,755 completed official cells are reported; the May 6 local-only slices added 24 \texttt{blocked\_adapter} records but no new official-score rows. Details appear in Tables~\ref{tab:benchmark_coverage}--\ref{tab:benchmark_blockers}. \\
 Live milestone blocking claim & Removed & Preserved artifacts do not support claiming this campaign exercised live blocking gates. \\
 External proof verification & Remaining & Depends on outside reviewer response. \\
 Anisotropic Theorem 2 expansion & Remaining & Claim summaries mark the expansion below verified-theorem status. \\
 Discrete-time Muon validation & Remaining & Not closed in the locked evidence set. \\
+Measured human-steering compression & Deferred & Requires structured gate-decision logs and paired \texttt{no\_human\_steering} benchmark ablations. \\
 \bottomrule
 \end{tabular}
 \end{table}
 
+\paragraph{Overclaim audit.}
+Appendix~\ref{app:benchmark_details} contains the full reviewer-risk audit used to scope the claims. The main-text rule is simple: every headline claim must point to a preserved Muon artifact, an official-score benchmark row, or an explicit remaining-work row.
+
 \section{Cost and Artifact Accounting}
-The locked budget state records total model spend of \$4191.61 through 2026-04-13, with the largest shares attributed to Claude Opus 4.6, Claude Sonnet 4.6, GPT-5.4, and Gemini 3.1 Pro Preview through the configured router. The metadata records commit \texttt{03b2339}, a dirty workspace flag, and council configuration with four model families. The review verdict records score 7, low AI-voice risk, and one hard blocker concerning unresolved reference markers in the Muon supplement; this technical-report build addresses its own reference and placeholder checks separately.
+The locked Muon budget state records total model spend of \$4191.61 through 2026-04-13, with the largest shares attributed to Claude Opus 4.6, Claude Sonnet 4.6, GPT-5.4, and Gemini 3.1 Pro Preview through the configured router. The metadata records commit \texttt{03b2339}, a dirty workspace flag, and council configuration with four model families. Separately, the May 6 benchmark master bundle records \$36.247208 of official-adapter model cost. The May 6 local-only extension added no model cost because all 24 selected cells failed closed before agent execution as \texttt{blocked\_adapter}. The review verdict records score 7, low AI-voice risk, and one hard blocker concerning unresolved reference markers in the Muon supplement; this technical-report build addresses its own reference and placeholder checks separately.
 
 \section{Limitations and Broader Impact}
-pAI's main limitation is that artifact structure is not proof correctness. Schema checks prevent silent state corruption, but scientific validity still depends on councils, human judgement, and reproducible experiments. The Muon case study also has mathematical limits: the anisotropic critical-batch-size extension, discrete-time convergence, and transformer-layer reduction remain incomplete. The broader-impact profile is similar to other AI-for-research tools: faster iteration can accelerate useful theory, but over-trusting generated proofs or experiments would harm scientific reliability. The evidence-locked workflow is a mitigation, not a guarantee.
+pAI's main limitation is that artifact structure is not proof correctness. Schema checks prevent silent state corruption, but scientific validity still depends on councils, human judgement, and reproducible experiments. The current benchmark evidence is also uneven: planning results are the cleanest positive signal, theory results are mixed, and experiment/lifecycle evidence remains pilot-scale or infrastructure-gated. The May 6 local-only extension confirmed that several experiment adapters are still not execution-ready under the submission resource policy. The Muon case study has mathematical limits: the anisotropic critical-batch-size extension, discrete-time convergence, and transformer-layer reduction remain incomplete. The broader-impact profile is similar to other AI-for-research tools: faster iteration can accelerate useful theory, but over-trusting generated proofs or experiments would harm scientific reliability. The evidence-locked workflow is a mitigation, not a guarantee.
 
 \section{Conclusion}
-This anonymous submission build converts the earlier placeholder draft into an evidence-locked technical report. It keeps the supported pAI architecture claims, repairs the Muon theorem statements, includes readable and claim-relevant figures, and flags the non-actioned recovery items instead of implying they were completed. The resulting report is therefore narrower than the original draft, but much closer to submission-ready scientific evidence.
+This anonymous submission build converts the earlier placeholder draft into an evidence-locked technical report. It keeps the supported pAI architecture claims, repairs the Muon theorem statements, includes readable and claim-relevant figures, reports official routed-subgraph benchmark scores with paired deltas, and flags non-actioned recovery items instead of implying they were completed. The resulting report is narrower than the original aspirational framing, but it is substantially closer to submission-ready scientific evidence.
 
 \appendix
+
+\section{Benchmark Details and Overclaim Audit}
+\label{app:benchmark_details}
+This appendix expands Table~\ref{tab:evidence_summary}. The source is the May 6 master bundle, merged from the prior master bundle and the May 6 local-only slices. Counts below are ledger counts, not inferred completions.
+
+\paragraph{Condition naming.}
+For reproducibility, the benchmark ledger preserves stable raw condition identifiers such as \texttt{full\_pai\_max\_counsel}. In this report, that identifier is interpreted as the relevant pAI capability subgraph run under the max-counsel configuration, not as every pAI module being exercised on every benchmark. Thus planning benchmarks evaluate the pAI planning subgraph, theory benchmarks evaluate pAI theory/formalization subgraphs, experiment benchmarks evaluate pAI experiment-execution subgraphs, and only the Muon case study is treated as end-to-end research-to-manuscript evidence. Component-specific causal claims require targeted ablations, not blanket comparisons against a monolithic system.
+
+\begin{table}[h]
+\centering
+\caption{Current benchmark coverage by family block in the May 6 master bundle.}
+\label{tab:benchmark_coverage}
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{0.24\linewidth}p{0.15\linewidth}p{0.29\linewidth}p{0.24\linewidth}@{}}
+\toprule
+\textbf{Family block} & \textbf{Planned cells} & \textbf{Ledger status} & \textbf{Report interpretation} \\
+\midrule
+MLR-Bench & 95 & 95 completed official & Complete planning-subgraph evidence slice. \\
+TheoremQA & 410 & 388 completed official & Text-only theory core is broad but mixed against single-model baselines; image tasks remain blocked. \\
+Scored ProofNet tracks & 2,247 & 2,247 completed official & Complete scored slices, with pAI close on Lean4 pass@1 but trailing the best single model on autoformalization/informalization. \\
+ML-Dev-Bench & 154 & 18 completed official; 6 \texttt{blocked\_adapter} & Small local experiment-subgraph slice; May 6 calipers cells did not execute. \\
+MLAgentBench & 75 & 4 completed official; 12 \texttt{blocked\_adapter}; 17 queued & Infrastructure-sensitive pilot; May 6 paired three-task slice blocked before scoring. \\
+MLGym & 88 & 3 completed official; 6 \texttt{blocked\_adapter}; 6 \texttt{blocked\_environment}; 73 queued & Pilot-scale only; not a family-level performance result. \\
+AIRS-Bench and MLRC-Bench & 222 & AIRS: 4 blocked; MLRC: 1 queued & No lifecycle official scores yet. \\
+Docker/cloud, credential, and formal-proof gated families & 950 & 0 completed official & Planned or blocked: CORE-Bench, MLE-Bench, PaperBench, SWE-Bench, DeepResearch-Bench, LeanDojo, miniF2F, PutnamBench, and the generic ProofNet informal-adapter slice. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Report-safe official-score summary. We report only metrics present in official-score rows and avoid claiming dominance where the current table does not support it.}
+\label{tab:benchmark_scores}
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{0.22\linewidth}p{0.24\linewidth}p{0.23\linewidth}p{0.23\linewidth}@{}}
+\toprule
+\textbf{Benchmark} & \textbf{pAI routed subgraph} & \textbf{External baselines} & \textbf{Caveat} \\
+\midrule
+MLR-Bench & Planning mean 7.700 over 20 tasks. & GPT-5.5: 7.500; Opus 4.7: 7.275; Gemini 3.1: 6.825. & Internal ablations are small slices of 5 tasks. \\
+TheoremQA & Exact accuracy 0.811 over 95 text tasks. & GPT-5.5: 0.821; Opus 4.7: 0.832; Gemini 3.1: 0.737. & The routed theory subgraph is competitive but not best among single-model baselines here. \\
+ProofNet autoformalization & BLEU 0.259 and Lean3 statement typecheck 0.586 over 186 tasks. & Opus 4.7 reaches 0.626 BLEU and 0.914 typecheck; GPT-5.5 and Gemini are mixed. & Current pAI autoformalization trails the strongest baseline. \\
+ProofNet informalization and Lean4 proof & Informalization BLEU 0.052; Lean4 pass@1 0.161 over 186 tasks. & Lean4 pass@1: Opus 0.167, GPT-5.5 0.134, Gemini 0.118. & Theory evidence is meaningful but not a broad-win claim. \\
+ML-Dev-Bench / MLAgentBench / MLGym & ML-Dev success 0.857 over 7 pAI cells; MLGym scores are zero in the 3-cell pilot. & ML-Dev GPT-5.5 baseline success 0.833 over 6 cells. & MLAgentBench and MLGym are too small and infrastructure-sensitive for headline claims. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Paired deltas from the same official ledger. Deltas are the relevant pAI routed subgraph minus the comparator on matched task IDs; intervals are 95\% bootstrap confidence intervals over tasks.}
+\label{tab:paired_deltas}
+\small
+\begin{tabular}{@{}p{0.26\linewidth}p{0.29\linewidth}p{0.13\linewidth}p{0.22\linewidth}@{}}
+\toprule
+\textbf{Benchmark and metric} & \textbf{Comparator} & \textbf{N} & \textbf{Paired delta} \\
+\midrule
+MLR-Bench planning mean & GPT-5.5 single agent & 20 & $+0.200$ [$-0.025$, $+0.425$] \\
+MLR-Bench planning mean & Opus 4.7 single agent & 20 & $+0.425$ [$+0.225$, $+0.625$] \\
+MLR-Bench planning mean & Gemini 3.1 single agent & 20 & $+0.875$ [$+0.650$, $+1.100$] \\
+TheoremQA exact accuracy & GPT-5.5 single agent & 95 & $-0.011$ [$-0.063$, $+0.042$] \\
+TheoremQA exact accuracy & Opus 4.7 single agent & 95 & $-0.021$ [$-0.084$, $+0.032$] \\
+TheoremQA exact accuracy & Gemini 3.1 single agent & 95 & $+0.074$ [$+0.000$, $+0.147$] \\
+ProofNet autoformalization BLEU & best single agent per task & 186 & $-0.384$ [$-0.426$, $-0.342$] \\
+ProofNet Lean3 statement typecheck & best single agent per task & 186 & $-0.387$ [$-0.457$, $-0.317$] \\
+ProofNet informalization BLEU & best single agent per task & 186 & $-0.082$ [$-0.097$, $-0.069$] \\
+ProofNet Lean4 pass@1 & best single agent per task & 186 & $-0.075$ [$-0.118$, $-0.032$] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Remaining benchmark blockers after the May 6 master bundle.}
+\label{tab:benchmark_blockers}
+\small
+\begin{tabular}{@{}p{0.25\linewidth}p{0.24\linewidth}p{0.43\linewidth}@{}}
+\toprule
+\textbf{Blocker} & \textbf{Affected families} & \textbf{Next action} \\
+\midrule
+Container/cloud equivalence & CORE-Bench, PaperBench, SWE-Bench, MLE-Bench & Use Docker/sysbox, Modal, Azure/HAL, or approved cloud runners before reporting official scores. \\
+Credentials & MLE-Bench, DeepResearch-Bench, some MLAgentBench tasks & Do not assume Kaggle, Gemini/Jina evaluator, or private dataset credentials unless present. \\
+Local Apptainer adapter completion & ML-Dev-Bench, MLGym, MLAgentBench & The May 6 local-only slices produced 24 \texttt{blocked\_adapter} records; adapter repair is post-submission work. \\
+Formal-proof adapters & LeanDojo, miniF2F, PutnamBench, generic ProofNet informal slice & Gate on Lean/Lake and benchmark-specific proof-review access. \\
+Ledger hygiene & CORE-Bench IDs and one stale MLGym extra row in the audited bundle & The harness now enforces unique matrix IDs, drops non-current cells on merge, and records missing planned cells by family. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Internal overclaim audit applied before submission.}
+\label{tab:overclaim_audit}
+\small
+\begin{tabular}{@{}p{0.30\linewidth}p{0.30\linewidth}p{0.32\linewidth}@{}}
+\toprule
+\textbf{Reviewer risk} & \textbf{Evidence check} & \textbf{Resolution in this report} \\
+\midrule
+Human steering sounds anecdotal. & No complete structured steering ledger exists. & State human-on-the-loop design, but defer measured compression and \texttt{no\_human\_steering} conclusions. \\
+System appears to claim broad dominance. & TheoremQA and ProofNet show mixed or negative paired deltas against the strongest single-model baselines. & Lead with MLR-Bench gains and report theory results as mixed evidence. \\
+Muon case study may be overinterpreted. & Preserved artifacts lack fresh Muon baselines and live milestone-gate evidence. & Present Muon as a stress test with explicit remaining-work rows. \\
+May 6 local slices may look like new scores. & All 24 selected cells became \texttt{blocked\_adapter}; no official scores or cost were added. & Report them only as execution-readiness and blocker evidence. \\
+Benchmark rows could be smoke artifacts. & Ledger rows report official scores only when \texttt{official\_score=true}. & Separate official completed rows from queued, blocked, and pilot-scale rows. \\
+Mathematical claims may outrun proofs. & Claim summaries mark several components below verified-theorem status. & Use evidence-scoped theorem language and keep anisotropic/discrete-time items open. \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \section{Claim-Evidence Ledger}
 \label{app:ledger}
@@ -255,17 +420,23 @@ This anonymous submission build converts the earlier placeholder draft into an e
 \centering
 \caption{Major claims and locked evidence sources. Paths are relative artifact identifiers rather than local filesystem locations.}
 \small
+\setlength{\tabcolsep}{3pt}
 \begin{tabular}{@{}p{0.31\linewidth}p{0.29\linewidth}p{0.31\linewidth}@{}}
 \toprule
 \textbf{Claim} & \textbf{Evidence} & \textbf{Report treatment} \\
 \midrule
-Frobenius contraction & \texttt{theory\_sections.tex}; \texttt{appendix\_proofs.tex} & Theorem~\ref{thm:spectral}(ii). \\
-Normalized sign criterion & \texttt{GPT54\_CYCLE3} proof artifacts; \texttt{fig\_sign\_criterion.pdf} & Theorem~\ref{thm:spectral}(iii), Figure~\ref{fig:sign_criterion}. \\
-Nuclear norm is not the Muon implicit regularizer & \texttt{experiment\_track\_summary.json}; \texttt{fig\_theorem\_a\_validation.pdf} & Figure~\ref{fig:theorem1_validation}. \\
-Critical batch-size formula & \texttt{theory\_track\_summary.json}; \texttt{v5\_results.tex}; \texttt{fig\_theorem\_b\_bcrit.pdf} & Evidence-scoped theorem with caveat. \\
-ATSR weight-decay pattern & \texttt{experiment\_track\_summary.json}; \texttt{fig\_atsr\_phase\_diagram.pdf} & Interpretation only, not upgraded to theorem. \\
-NanoGPT transformer evidence & \texttt{v5\_transformer.tex}; \texttt{fig\_h3\_nanogpt.pdf} & Suggestive evidence only. \\
-Fresh baselines and ablations & Not present in locked artifacts & Deferred in Table~\ref{tab:remaining}. \\
+Frobenius contraction & \path{theory_sections.tex}; \path{appendix_proofs.tex} & Theorem~\ref{thm:spectral}(ii). \\
+Normalized sign criterion & \path{GPT54_CYCLE3} proof artifacts; \path{fig_sign_criterion.pdf} & Theorem~\ref{thm:spectral}(iii), Figure~\ref{fig:sign_criterion}. \\
+Nuclear norm is not the Muon implicit regularizer & \path{experiment_track_summary.json}; \path{fig_theorem_a_validation.pdf} & Figure~\ref{fig:theorem1_validation}. \\
+Critical batch-size formula & \path{theory_track_summary.json}; \path{v5_results.tex}; \path{fig_theorem_b_bcrit.pdf} & Evidence-scoped theorem with caveat. \\
+ATSR weight-decay pattern & \path{experiment_track_summary.json}; \path{fig_atsr_phase_diagram.pdf} & Interpretation only, not upgraded to theorem. \\
+NanoGPT transformer evidence & \path{v5_transformer.tex}; \path{fig_h3_nanogpt.pdf} & Suggestive evidence only. \\
+Fresh Muon baselines and ablations & Not present in locked Muon artifacts & Deferred in Table~\ref{tab:remaining}. \\
+MLR-Bench planning gain & May 6 benchmark master bundle; \path{official_score_summary_table.md} & Positive paired deltas in Table~\ref{tab:paired_deltas}. \\
+Mixed theory benchmark evidence & May 6 benchmark master bundle; \path{compact_result_ledger.jsonl} & TheoremQA and ProofNet reported without uniform-win claim. \\
+May 6 local-only benchmark extension & \path{pai_neurips_may6_ml_dev_calipers}; \path{pai_neurips_may6_mlgym_pilot}; \path{pai_neurips_may6_mlab_paired3} & No new official scores; 24 \texttt{blocked\_adapter} rows are reported as blocker evidence. \\
+External benchmark progress & May 6 benchmark master bundle & Reported with official-score, paired-delta, and blocker caveats. \\
+Human-steering compression & No complete structured steering ledger & Not claimed; deferred to future \texttt{HumanSteeringEvent} logging and paired ablations. \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -274,7 +445,7 @@ Fresh baselines and ablations & Not present in locked artifacts & Deferred in Ta
 \label{app:maturity}
 \begin{table}[h]
 \centering
-\caption{Honest maturity snapshot for the pAI gates in this evidence-only report.}
+\caption{Honest maturity snapshot for the pAI gates in this evidence-scoped report.}
 \small
 \begin{tabular}{@{}p{0.24\linewidth}p{0.24\linewidth}p{0.42\linewidth}@{}}
 \toprule
@@ -283,7 +454,9 @@ Fresh baselines and ablations & Not present in locked artifacts & Deferred in Ta
 Literature and brainstorm gates & Implemented capability & Staged artifacts and summaries exist; exact live enforcement depth is not overclaimed. \\
 Claim-DAG lifecycle & Implemented capability & Claim summaries preserve statuses and omitted claims. \\
 Theory/experiment exchange & Demonstrated partially & Experiment summaries tie claims to figures and verification outcomes. \\
+Local experiment adapters & Not execution-ready for all slices & May 6 ML-Dev, MLGym, and MLAgentBench extensions failed closed as \texttt{blocked\_adapter}. \\
 Cross-family council & Configured and used & Metadata records four-model council and debate settings. \\
+Structured human-steering ledger & Not yet an evidence source & Future runs should log task, gate, options, selected action, human minutes, rationale, repair route, and final score. \\
 HTTP milestone blocking & Not claimed as demonstrated & Preserved artifacts do not support live blocking-gate claims for this run. \\
 Reviewer ensemble & Demonstrated as review artifact & Review verdict JSON exists and is cited as audit evidence. \\
 Submission packaging & Actioned in this build & This report and source package compile from the new submission tree. \\
